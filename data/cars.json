@@ -1,0 +1,226 @@
+[
+    {
+        "id": "duster-grey-man-diesel",
+        "name_fr": "Dacia Duster - Grey - Boite manuelle - Diesel",
+        "segment": "SUV",
+        "gearbox": "Manuelle",
+        "fuel": "Diesel",
+        "seats": 5,
+        "bags": 4,
+        "price_per_day": 450,
+        "image": "./img/duster-grey-man-diesel.jpg",
+        "features": [
+            "4x2",
+            "AC",
+            "Bluetooth"
+        ]
+    },
+    {
+        "id": "stepway-silver-auto-essence",
+        "name_fr": "Dacia Stepway - Silver - Automatique - Essence",
+        "segment": "Compacte",
+        "gearbox": "Automatique",
+        "fuel": "Essence",
+        "seats": 5,
+        "bags": 3,
+        "price_per_day": 360,
+        "image": "./img/stepway-silver-auto-essence.jpg",
+        "features": [
+            "Airbag",
+            "AC",
+            "Bluetooth"
+        ]
+    },
+    {
+        "id": "stepway-black-man-diesel",
+        "name_fr": "Dacia Stepway - Black - Boite manuelle - Diesel",
+        "segment": "Compacte",
+        "gearbox": "Manuelle",
+        "fuel": "Diesel",
+        "seats": 5,
+        "bags": 3,
+        "price_per_day": 320,
+        "image": "./img/stepway-black-man-diesel.jpg",
+        "features": [
+            "Airbag",
+            "AC",
+            "Bluetooth"
+        ]
+    },
+    {
+        "id": "stepway-bronze-man-diesel",
+        "name_fr": "Dacia Stepway - Bronze - Boite manuelle - Diesel",
+        "segment": "Compacte",
+        "gearbox": "Manuelle",
+        "fuel": "Diesel",
+        "seats": 5,
+        "bags": 3,
+        "price_per_day": 320,
+        "image": "./img/stepway-bronze-man-diesel.jpg",
+        "features": [
+            "Airbag",
+            "AC",
+            "Bluetooth"
+        ]
+    },
+    {
+        "id": "stepway-green-man-diesel",
+        "name_fr": "Dacia Stepway - Green - Boite manuelle - Diesel",
+        "segment": "Compacte",
+        "gearbox": "Manuelle",
+        "fuel": "Diesel",
+        "seats": 5,
+        "bags": 3,
+        "price_per_day": 320,
+        "image": "./img/stepway-green-man-diesel.jpg",
+        "features": [
+            "Airbag",
+            "AC",
+            "Bluetooth"
+        ]
+    },
+    {
+        "id": "logan-green-auto-essence",
+        "name_fr": "Dacia Logan - Green - Automatique - Essence",
+        "segment": "Economique",
+        "gearbox": "Automatique",
+        "fuel": "Essence",
+        "seats": 5,
+        "bags": 3,
+        "price_per_day": 320,
+        "image": "./img/logan-green-auto-essence.jpg",
+        "features": [
+            "Airbag",
+            "AC",
+            "Bluetooth"
+        ]
+    },
+    {
+        "id": "logan-grey-man-diesel",
+        "name_fr": "Dacia Logan - Grey - Boite manuelle - Diesel",
+        "segment": "Economique",
+        "gearbox": "Manuelle",
+        "fuel": "Diesel",
+        "seats": 5,
+        "bags": 3,
+        "price_per_day": 250,
+        "image": "./img/logan-grey-man-diesel.jpg",
+        "features": [
+            "Airbag",
+            "AC",
+            "Bluetooth"
+        ]
+    },
+    {
+        "id": "clio5-blue-man-diesel",
+        "name_fr": "Renault Clio 5 - Blue - Boite manuelle - Diesel",
+        "segment": "Economique",
+        "gearbox": "Manuelle",
+        "fuel": "Diesel",
+        "seats": 5,
+        "bags": 2,
+        "price_per_day": 290,
+        "image": "./img/clio5-blue-man-diesel.jpg",
+        "features": [
+            "Airbag",
+            "AC",
+            "Bluetooth"
+        ]
+    },
+    {
+        "id": "clio5-black-man-diesel",
+        "name_fr": "Renault Clio 5 - Black - Boite manuelle - Diesel",
+        "segment": "Economique",
+        "gearbox": "Manuelle",
+        "fuel": "Diesel",
+        "seats": 5,
+        "bags": 2,
+        "price_per_day": 290,
+        "image": "./img/clio5-black-man-diesel.jpg",
+        "features": [
+            "Airbag",
+            "AC",
+            "Bluetooth"
+        ]
+    },
+    {
+        "id": "c3-darkgrey-auto-essence",
+        "name_fr": "Citroen C3 - Dark Grey - Automatique - Essence",
+        "segment": "Compacte",
+        "gearbox": "Automatique",
+        "fuel": "Essence",
+        "seats": 5,
+        "bags": 2,
+        "price_per_day": 0,
+        "image": "./img/c3-darkgrey-auto-essence.jpg",
+        "features": [
+            "Airbag",
+            "AC",
+            "Bluetooth"
+        ]
+    },
+    {
+        "id": "p208-white-auto-essence",
+        "name_fr": "Peugeot 208 - White - Manuelle - Diesel",
+        "segment": "Compacte",
+        "gearbox": "Manuelle",
+        "fuel": "Diesel",
+        "seats": 5,
+        "bags": 2,
+        "price_per_day": 0,
+        "image": "./img/p208-white-auto-essence.jpg",
+        "features": [
+            "Airbag",
+            "AC",
+            "Bluetooth"
+        ]
+    },
+    {
+        "id": "p208-yellow-auto-essence",
+        "name_fr": "Peugeot 208 - Yellow - Manuelle - Diesel",
+        "segment": "Compacte",
+        "gearbox": "Manuelle",
+        "fuel": "Diesel",
+        "seats": 5,
+        "bags": 2,
+        "price_per_day": 0,
+        "image": "./img/p208-yellow-auto-essence.jpg",
+        "features": [
+            "Airbag",
+            "AC",
+            "Bluetooth"
+        ]
+    },
+    {
+        "id": "i10-blue-auto-essence",
+        "name_fr": "Hyundai i10 - Blue - Automatique - Essence",
+        "segment": "Mini",
+        "gearbox": "Automatique",
+        "fuel": "Essence",
+        "seats": 4,
+        "bags": 1,
+        "price_per_day": 220,
+        "image": "./img/i10-blue-auto-essence.jpg",
+        "features": [
+            "Airbag",
+            "AC",
+            "USB"
+        ]
+    },
+    {
+        "id": "i20-black-auto-essence",
+        "name_fr": "Hyundai i20 - Black - Automatique - Essence",
+        "segment": "Compacte",
+        "gearbox": "Automatique",
+        "fuel": "Essence",
+        "seats": 5,
+        "bags": 2,
+        "price_per_day": 300,
+        "image": "./img/i20-black-auto-essence.jpg",
+        "features": [
+            "Airbag",
+            "AC",
+            "Bluetooth"
+        ]
+    }
+]

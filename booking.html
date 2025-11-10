@@ -1,0 +1,169 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VIGICAR &mdash; R&eacute;servation</title>
+  <meta name="description" content="R&eacute;servez votre voiture &agrave; Mekn&egrave;s avec VIGICAR: simple, rapide et s&eacute;curis&eacute;.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="/booking.html">
+  <link rel="icon" type="image/png" href="./img/logo.png">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link" data-i18n="skip_to_content">Aller au contenu</a>
+  <header class="navbar" role="banner">
+    <div class="container inner">
+      <a class="brand" href="./index.html" aria-label="VIGICAR">
+        <img id="brand-logo" src="./img/logo.png" alt="Logo VIGICAR" width="40" height="40">
+        <strong>VIGICAR</strong>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Basculer le menu" data-i18n-aria-label="nav_toggle_label" aria-expanded="false" aria-controls="primary-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="primary-nav" class="nav-links" aria-label="Navigation principale">
+        <a href="./index.html" data-i18n="nav_home">Accueil</a>
+        <a href="./fleet.html" data-i18n="nav_fleet">Notre flotte</a>
+        <a href="./pricing.html" data-i18n="nav_pricing">Tarifs</a>
+        <a href="./booking.html" class="cta" data-i18n="nav_booking" aria-current="page">R&eacute;servation</a>
+        <a href="./about.html" data-i18n="nav_about">&Agrave; propos</a>
+        <a href="./contact.html" data-i18n="nav_contact">Contact</a>
+        <button id="lang-toggle" class="lang-toggle" type="button">FR</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section container section-card">
+      <h1 data-i18n="booking_title">R&eacute;servation</h1>
+      <p class="muted" data-i18n="booking_intro">Choisissez votre mod&egrave;le, indiquez la dur&eacute;e souhait&eacute;e puis envoyez la demande sur WhatsApp pour une confirmation instantan&eacute;e.</p>
+    </section>
+
+    <section class="section container section-card wa-section" aria-labelledby="wa-title" id="wa-contact">
+      <div class="wa-layout">
+        <div class="wa-copy" data-animate>
+          <p class="eyebrow" data-i18n="wa_badge">R&eacute;ponse en moins d'une heure</p>
+          <h2 id="wa-title" data-i18n="quick_wa_title">📲 R&eacute;servez votre voiture instantan&eacute;ment via WhatsApp</h2>
+          <p class="muted" data-i18n="wa_intro">Indiquez le mod&egrave;le et la dur&eacute;e pour recevoir le tarif et valider la livraison &agrave; Mekn&egrave;s ou &agrave; l'a&eacute;roport.</p>
+          <ul class="wa-highlights">
+            <li data-i18n="wa_highlight_delivery">Livraison h&ocirc;tel, gare ou a&eacute;roport de F&egrave;s.</li>
+            <li data-i18n="wa_highlight_pricing">Tarifs transparents et paiement flexible.</li>
+            <li data-i18n="wa_highlight_support">Assistance 24/7 et options sur demande.</li>
+          </ul>
+          <div class="contact-pills">
+            <a class="contact-pill" href="tel:+212663650333"><span>📞</span>+212 6 63 650 333</a>
+            <a class="contact-pill" href="mailto:vigicar@gmail.com"><span>✉️</span>vigicar@gmail.com</a>
+          </div>
+        </div>
+        <form class="wa-reserve" onsubmit="return false" data-animate>
+          <div class="field-group">
+            <div class="field field--main">
+              <label for="wa-car"><span class="label-icon" aria-hidden="true">🚗</span><span data-i18n="label_car">Mod&egrave;le</span></label>
+              <select id="wa-car" required></select>
+            </div>
+            <div class="field field--compact">
+              <label for="wa-days"><span class="label-icon" aria-hidden="true">🗓️</span><span data-i18n="label_days">Dur&eacute;e (jours)</span></label>
+              <select id="wa-days" required></select>
+            </div>
+          </div>
+          <div class="field field--full">
+            <label for="wa-phone"><span class="label-icon" aria-hidden="true">📱</span><span data-i18n="label_phone">Num&eacute;ro WhatsApp</span></label>
+            <select id="wa-phone" required>
+              <option value="212663650333">+212 6 63 650 333</option>
+              <option value="212660946555">+212 6 60 94 65 55</option>
+            </select>
+          </div>
+          <div class="actions">
+            <button id="wa-send" type="button" class="btn whatsapp" data-i18n="send_whatsapp">Envoyer sur WhatsApp</button>
+          </div>
+          <p class="wa-note" data-i18n="wa_note">Votre demande part directement sur WhatsApp &#x1F4F2;</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section container section-card">
+      <h2 data-i18n="benefits_title">Tout est pr&eacute;vu pour votre confort</h2>
+      <div class="icon-grid">
+        <article class="icon-card">
+          <div class="icon">📍</div>
+          <h3 data-i18n="benefit_delivery_title">Livraison personnalis&eacute;e</h3>
+          <p data-i18n="benefit_delivery_text">Remise du v&eacute;hicule &agrave; Mekn&egrave;s centre, &agrave; votre h&ocirc;tel ou directement &agrave; l'a&eacute;roport.</p>
+        </article>
+        <article class="icon-card">
+          <div class="icon">💳</div>
+          <h3 data-i18n="benefit_pricing_title">Tarifs clairs</h3>
+          <p data-i18n="benefit_pricing_text">Pas de frais cach&eacute;s: nous confirmons le prix final avant d'envoyer la voiture.</p>
+        </article>
+        <article class="icon-card">
+          <div class="icon">🛡️</div>
+          <h3 data-i18n="benefit_assistance_title">Assurance &amp; assistance</h3>
+          <p data-i18n="benefit_assistance_text">Couverture, assistance 24/7 et num&eacute;ros directs en cas de besoin.</p>
+        </article>
+        <article class="icon-card">
+          <div class="icon">👶</div>
+          <h3 data-i18n="benefit_options_title">Options sur demande</h3>
+          <p data-i18n="benefit_options_text">GPS, si&egrave;ge b&eacute;b&eacute;, conducteur suppl&eacute;mentaire... il suffit de le mentionner.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+
+  <a class="whatsapp-float" href="https://wa.me/212663650333" target="_blank" rel="noopener" aria-label="WhatsApp"><span aria-hidden="true">WA</span></a>
+
+  <footer role="contentinfo" class="site-footer">
+    <div class="container footer-hero">
+      <div>
+        <p class="eyebrow" data-i18n="footer_eyebrow">Toujours disponibles</p>
+        <h2 data-i18n="footer_cta_title">Parlons de votre prochaine location</h2>
+        <p data-i18n="footer_cta_text">Assistance 24/7, r&eacute;ponse rapide sur WhatsApp ou t&eacute;l&eacute;phone.</p>
+      </div>
+      <div class="footer-actions">
+        <a class="btn whatsapp" href="https://wa.me/212663650333" target="_blank" rel="noopener" data-i18n="footer_btn_whatsapp">WhatsApp</a>
+        <a class="btn primary" href="tel:+212663650333" data-i18n="cta_call">Appeler VIGICAR</a>
+      </div>
+    </div>
+    <div class="container footer-grid">
+      <div class="footer-card">
+        <div class="brand-minimal">
+          <img src="./img/logo.png" alt="Logo VIGICAR" width="48" height="48" loading="lazy">
+          <strong data-i18n="footer_company">VIGICAR &mdash; Location de voitures &agrave; Mekn&egrave;s</strong>
+        </div>
+        <p data-i18n="footer_contact_info">T&eacute;l: <a href="tel:+212663650333">+212 6 63 650 333</a> / <a href="tel:+212660946555">+212 6 60 94 65 55</a> &middot; WhatsApp: <a href="https://wa.me/212663650333" target="_blank" rel="noopener">wa.me/212663650333</a> / <a href="https://wa.me/212660946555" target="_blank" rel="noopener">wa.me/212660946555</a><br>Email: <a href="mailto:vigicar@gmail.com">vigicar@gmail.com</a><br>Adresse: Mag N&deg;1, R&eacute;sidence Kaoutar, Rue Chefchaouen, Ville Nouvelle, Mekn&egrave;s, Maroc</p>
+      </div>
+      <div class="footer-card">
+        <h4 data-i18n="quick_links">Liens rapides</h4>
+        <nav>
+          <a href="./index.html" data-i18n="nav_home">Accueil</a><br>
+          <a href="./fleet.html" data-i18n="nav_fleet">Notre flotte</a><br>
+          <a href="./pricing.html" data-i18n="nav_pricing">Tarifs</a><br>
+          <a href="./booking.html" data-i18n="nav_booking">R&eacute;servation</a><br>
+          <a href="./about.html" data-i18n="nav_about">&Agrave; propos</a><br>
+          <a href="./contact.html" data-i18n="nav_contact">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-card">
+        <h4 data-i18n="footer_contacts_title">Contacts directs</h4>
+        <p><a href="tel:+212663650333">+212 6 63 650 333</a><br><a href="tel:+212660946555">+212 6 60 94 65 55</a></p>
+        <p><a href="https://wa.me/212663650333" target="_blank" rel="noopener" data-i18n="footer_whatsapp_main">WhatsApp principal</a><br><a href="https://wa.me/212660946555" target="_blank" rel="noopener" data-i18n="footer_whatsapp_agency">WhatsApp agence</a></p>
+      </div>
+      <div class="footer-card">
+        <h4 data-i18n="hours">Horaires</h4>
+        <p data-i18n="monsun">Lun&ndash;Dim : 08:00&ndash;22:00</p>
+        <p data-i18n="footer_emergency">Service d'urgence 24/7</p>
+      </div>
+    </div>
+    <div class="container copy"><span id="footer-year"></span> <span data-i18n="footer_copy_label">VIGICAR &mdash; Tous droits r&eacute;serv&eacute;s.</span></div>
+  </footer>
+
+
+  <script src="./js/main.js" defer></script>
+</body>
+</html>
+
