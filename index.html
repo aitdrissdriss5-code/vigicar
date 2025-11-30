@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
@@ -81,6 +81,7 @@
         <a href="./booking.html" class="cta" data-i18n="nav_booking">R&eacute;servation</a>
         <a href="./about.html" data-i18n="nav_about">&Agrave; propos</a>
         <a href="./contact.html" data-i18n="nav_contact">Contact</a>
+        <a href="./legal/privacy.html" class="nav-legal" data-i18n="nav_privacy">Confidentialit&eacute;</a>
         <button id="lang-toggle" class="lang-toggle" type="button">FR</button>
       </nav>
     </div>
@@ -124,51 +125,51 @@
 
     <section class="section container section-card" aria-labelledby="stats-title">
       <div class="flex" style="flex-direction:column; gap:.2rem">
-        <h2 id="stats-title">Nos chiffres parlent pour nous</h2>
-        <p class="muted">Des centaines de trajets termin&eacute;s chaque ann&eacute;e avec une prise en charge premium.</p>
+        <h2 id="stats-title" data-i18n="stats_title">Nos chiffres parlent pour nous</h2>
+        <p class="muted" data-i18n="stats_subtitle">Des centaines de trajets termin&eacute;s chaque ann&eacute;e avec une prise en charge premium.</p>
       </div>
       <div class="stat-grid" aria-live="polite">
         <div class="stat-card">
           <strong>120+</strong>
-          <span>V&eacute;hicules livr&eacute;s ce trimestre</span>
+          <span data-i18n="stat_vehicles">V&eacute;hicules livr&eacute;s ce trimestre</span>
         </div>
         <div class="stat-card">
           <strong>45 min</strong>
-          <span>Temps moyen de r&eacute;ponse WhatsApp</span>
+          <span data-i18n="stat_response">Temps moyen de r&eacute;ponse WhatsApp</span>
         </div>
         <div class="stat-card">
           <strong>4,9/5</strong>
-          <span>Note moyenne clients</span>
+          <span data-i18n="stat_rating">Note moyenne clients</span>
         </div>
         <div class="stat-card">
           <strong>24/7</strong>
-          <span>Assistance disponible</span>
+          <span data-i18n="stat_support">Assistance disponible</span>
         </div>
       </div>
     </section>
 
     <section class="section container section-card" aria-labelledby="services-title">
-      <h2 id="services-title">Des services pens&eacute;s pour un voyage fluide</h2>
+      <h2 id="services-title" data-i18n="services_title">Des services pens&eacute;s pour un voyage fluide</h2>
       <div class="icon-grid">
         <article class="icon-card">
-          <div class="icon">🚘</div>
-          <h3>Flotte r&eacute;cente</h3>
-          <p>S&eacute;lection d&eacute;taill&eacute;e de citadines, compactes et SUV entretenus en interne.</p>
+          <div class="icon" aria-hidden="true">&#128663;</div>
+          <h3 data-i18n="service_fleet_title">Flotte r&eacute;cente</h3>
+          <p data-i18n="service_fleet_text">S&eacute;lection d&eacute;taill&eacute;e de citadines, compactes et SUV entretenus en interne.</p>
         </article>
         <article class="icon-card">
-          <div class="icon">📍</div>
-          <h3>Livraison personnalis&eacute;e</h3>
-          <p>H&ocirc;tel, gare ou a&eacute;roport: nous livrons le v&eacute;hicule l&agrave; o&ugrave; vous arrivez.</p>
+          <div class="icon" aria-hidden="true">&#128205;</div>
+          <h3 data-i18n="service_delivery_title">Livraison personnalis&eacute;e</h3>
+          <p data-i18n="service_delivery_text">H&ocirc;tel, gare ou a&eacute;roport: nous livrons le v&eacute;hicule l&agrave; o&ugrave; vous arrivez.</p>
         </article>
         <article class="icon-card">
-          <div class="icon">🛡️</div>
-          <h3>Couverture rassurante</h3>
-          <p>Assurance, assistance et options sur demande (si&egrave;ge b&eacute;b&eacute;, GPS, conducteur suppl&eacute;mentaire).</p>
+          <div class="icon" aria-hidden="true">&#128737;</div>
+          <h3 data-i18n="service_cover_title">Couverture rassurante</h3>
+          <p data-i18n="service_cover_text">Assurance, assistance et options sur demande (si&egrave;ge b&eacute;b&eacute;, GPS, conducteur suppl&eacute;mentaire).</p>
         </article>
         <article class="icon-card">
-          <div class="icon">⚡</div>
-          <h3>Process rapide</h3>
-          <p>Signature num&eacute;rique, acompte flexible et validation instantan&eacute;e via WhatsApp.</p>
+          <div class="icon" aria-hidden="true">&#9889;</div>
+          <h3 data-i18n="service_process_title">Process rapide</h3>
+          <p data-i18n="service_process_text">Signature num&eacute;rique, acompte flexible et validation instantan&eacute;e via WhatsApp.</p>
         </article>
       </div>
     </section>
@@ -176,37 +177,37 @@
     <section class="section container section-card wa-section" aria-labelledby="wa-title" id="wa-contact">
       <div class="wa-layout">
         <div class="wa-copy" data-animate>
-          <p class="eyebrow">R&eacute;ponse en moins d'une heure</p>
-          <h2 id="wa-title" data-i18n="quick_wa_title">📲 R&eacute;servez votre voiture instantan&eacute;ment via WhatsApp</h2>
-          <p class="muted">Choisissez le mod&egrave;le et la dur&eacute;e, puis envoyez votre demande en un clic. Nous confirmons disponibilit&eacute; et livraison o&ugrave; vous le souhaitez.</p>
+          <p class="eyebrow" data-i18n="wa_badge">R&eacute;ponse en moins d'une heure</p>
+          <h2 id="wa-title" data-i18n="quick_wa_title">&#128242; R&eacute;servez votre voiture instantan&eacute;ment via WhatsApp</h2>
+          <p class="muted" data-i18n="wa_intro">Choisissez le mod&egrave;le et la dur&eacute;e, puis envoyez votre demande en un clic. Nous confirmons disponibilit&eacute; et livraison o&ugrave; vous le souhaitez.</p>
           <ul class="wa-highlights">
-            <li>Livraison h&ocirc;tel, gare ou a&eacute;roport de F&egrave;s.</li>
-            <li>Tarifs transparents et paiement flexible.</li>
-            <li>Assistance 24/7 et options sur demande.</li>
+            <li data-i18n="wa_highlight_delivery">Livraison h&ocirc;tel, gare ou a&eacute;roport de F&egrave;s.</li>
+            <li data-i18n="wa_highlight_pricing">Tarifs transparents et paiement flexible.</li>
+            <li data-i18n="wa_highlight_support">Assistance 24/7 et options sur demande.</li>
           </ul>
           <div class="contact-pills">
-            <a class="contact-pill" href="tel:+212663650333"><span>📞</span>+212 6 63 650 333</a>
-            <a class="contact-pill" href="mailto:vigicar@gmail.com"><span>✉️</span>vigicar@gmail.com</a>
+            <a class="contact-pill" href="tel:+212663650333"><span aria-hidden="true">&#128222;</span>+212 6 63 650 333</a>
+            <a class="contact-pill" href="mailto:vigicar@gmail.com"><span aria-hidden="true">&#9993;</span>vigicar@gmail.com</a>
           </div>
         </div>
         <form class="wa-reserve" onsubmit="return false" data-animate>
           <div class="field-group">
             <div class="field field--main">
               <label for="wa-car"><span class="label-icon" aria-hidden="true">🚗</span><span data-i18n="label_car">Mod&egrave;le</span></label>
-              <select id="wa-car" required></select>
-            </div>
-            <div class="field field--compact">
-              <label for="wa-days"><span class="label-icon" aria-hidden="true">🗓️</span><span data-i18n="label_days">Dur&eacute;e (jours)</span></label>
-              <select id="wa-days" required></select>
-            </div>
+            <select id="wa-car" required></select>
           </div>
-          <div class="field field--full">
+          <div class="field field--compact">
+              <label for="wa-days"><span class="label-icon" aria-hidden="true">⏱️</span><span data-i18n="label_days">Dur&eacute;e (jours)</span></label>
+            <select id="wa-days" required></select>
+          </div>
+        </div>
+        <div class="field field--full">
             <label for="wa-phone"><span class="label-icon" aria-hidden="true">📱</span><span data-i18n="label_phone">Num&eacute;ro WhatsApp</span></label>
-            <select id="wa-phone" required>
-              <option value="212663650333">+212 6 63 650 333</option>
-              <option value="212660946555">+212 6 60 94 65 55</option>
-            </select>
-          </div>
+          <select id="wa-phone" required>
+            <option value="212663650333">+212 6 63 650 333</option>
+            <option value="212660946555">+212 6 60 94 65 55</option>
+          </select>
+        </div>
           <div class="actions">
             <button id="wa-send" type="button" class="btn whatsapp" data-i18n="send_whatsapp">Envoyer sur WhatsApp</button>
           </div>
@@ -320,4 +321,5 @@
   <script src="./js/main.js" defer></script>
 </body>
 </html>
+
 

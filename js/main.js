@@ -42,8 +42,8 @@
   };
   const PREVIEW_LABELS = {
     fr:{rate:'Tarif', seats:'Places', bags:'Bagages', transmission:'Transmission', fuel:'Essence', features:'\u00C9quipements'},
-    en:{rate:'Rate', seats:'Seats', bags:'Bags', transmission:'Transmission', fuel:'Essence', features:'Highlights'},
-    ar:{rate:'\u0627\u0644\u0633\u0639\u0631', seats:'\u0639\u062f\u062f \u0627\u0644\u0645\u0642\u0627\u0639\u062f', bags:'\u0627\u0644\u0623\u0645\u062a\u0639\u0629', transmission:'\u0646\u0627\u0642\u0644 \u0627\u0644\u062d\u0631\u0643\u0629', fuel:'Essence', features:'\u0623\u0628\u0631\u0632 \u0627\u0644\u0645\u0632\u0627\u064a\u0627'}
+    en:{rate:'Rate', seats:'Seats', bags:'Bags', transmission:'Transmission', fuel:'Fuel', features:'Highlights'},
+    ar:{rate:'\u0627\u0644\u0633\u0639\u0631', seats:'\u0639\u062f\u062f \u0627\u0644\u0645\u0642\u0627\u0639\u062f', bags:'\u0627\u0644\u0623\u0645\u062a\u0639\u0629', transmission:'\u0646\u0627\u0642\u0644 \u0627\u0644\u062d\u0631\u0643\u0629', fuel:'\u0627\u0644\u0648\u0642\u0648\u062f', features:'\u0623\u0628\u0631\u0632 \u0627\u0644\u0645\u0632\u0627\u064a\u0627'}
   };
   const SUMMARY_LABELS = {
     fr:{title:'R&eacute;capitulatif', model:'Mod&egrave;le', location:'Lieu', pickup:'D&eacute;part', dropoff:'Retour', options:'Options', total:'Estimation', none:'Aucune', day:'jour', days:'jours'},
@@ -57,6 +57,12 @@
     ar:'\u062A\u063A\u064A\u064A\u0631 \u0627\u0644\u0644\u063A\u0629 (AR)'
   };
 
+  const WA_TEMPLATES = {
+    fr:{greeting:'Bonjour,', intent:'Je souhaite r\u00e9server une voiture.', model:'*Mod\u00e8le :*', duration:'*Dur\u00e9e :*', day:'jour', days:'jours', thanks:'Merci de me confirmer la disponibilit\u00e9.'},
+    en:{greeting:'Hello,', intent:'I would like to book a car.', model:'*Model:*', duration:'*Duration:*', day:'day', days:'days', thanks:'Please confirm availability. Thank you.'},
+    ar:{greeting:'\u0645\u0631\u062d\u0628\u0627\u064b\u060c', intent:'\u0623\u0631\u063a\u0628 \u0641\u064a \u062d\u062c\u0632 \u0633\u064a\u0627\u0631\u0629.', model:'*\u0627\u0644\u0645\u0648\u062f\u064a\u0644:*', duration:'*\u0627\u0644\u0645\u062f\u0629:*', day:'\u064a\u0648\u0645', days:'\u0623\u064a\u0627\u0645', thanks:'\u064a\u0631\u062c\u0649 \u062a\u0623\u0643\u064a\u062f \u0627\u0644\u062a\u0648\u0641\u0631. \u0634\u0643\u0631\u0627\u064b.'}
+  };
+
   const I18N = {
     fr:{
       nav_home:'Accueil',
@@ -65,6 +71,7 @@
       nav_booking:'R&eacute;servation',
       nav_about:'&Agrave; propos',
       nav_contact:'Contact',
+      nav_privacy:'Confidentialit&eacute;',
       skip_to_content:'Aller au contenu',
       nav_toggle_label:'Basculer le menu',
       hero_title:'Location de voitures &agrave; Mekn&egrave;s &mdash; professionnel, rapide, fiable.',
@@ -80,6 +87,21 @@
       testimonial_1:'&laquo;&nbsp;Service impeccable et livraison rapide &agrave; l&rsquo;h&ocirc;tel.&nbsp;&raquo; &mdash; Salma',
       testimonial_2:'&laquo;&nbsp;Voiture propre, prix clair, aucune mauvaise surprise.&nbsp;&raquo; &mdash; Youssef',
       testimonial_3:'&laquo;&nbsp;Support 24/7 tr&egrave;s r&eacute;actif, je recommande.&nbsp;&raquo; &mdash; Maria',
+      stats_title:'Nos chiffres parlent pour nous',
+      stats_subtitle:'Des centaines de trajets termin&eacute;s chaque ann&eacute;e avec une prise en charge premium.',
+      stat_vehicles:'V&eacute;hicules livr&eacute;s ce trimestre',
+      stat_response:'Temps moyen de r&eacute;ponse WhatsApp',
+      stat_rating:'Note moyenne clients',
+      stat_support:'Assistance disponible',
+      services_title:'Des services pens&eacute;s pour un voyage fluide',
+      service_fleet_title:'Flotte r&eacute;cente',
+      service_fleet_text:'S&eacute;lection d&eacute;taill&eacute;e de citadines, compactes et SUV entretenus en interne.',
+      service_delivery_title:'Livraison personnalis&eacute;e',
+      service_delivery_text:'H&ocirc;tel, gare ou a&eacute;roport: nous livrons le v&eacute;hicule l&agrave; o&ugrave; vous arrivez.',
+      service_cover_title:'Couverture rassurante',
+      service_cover_text:'Assurance, assistance et options sur demande (si&egrave;ge b&eacute;b&eacute;, GPS, conducteur suppl&eacute;mentaire).',
+      service_process_title:'Process rapide',
+      service_process_text:'Signature num&eacute;rique, acompte flexible et validation instantan&eacute;e via WhatsApp.',
       steps_title:'Comment se passe votre location',
       step_choose_title:'1. Choisissez',
       step_choose_text:'S&eacute;lectionnez un mod&egrave;le selon vos dates dans la flotte ou via WhatsApp.',
@@ -217,6 +239,7 @@
       nav_booking:'Booking',
       nav_about:'About',
       nav_contact:'Contact',
+      nav_privacy:'Privacy',
       skip_to_content:'Skip to content',
       nav_toggle_label:'Toggle menu',
       hero_title:'Car rental in Mekn&egrave;s &mdash; professional, fast, reliable.',
@@ -232,6 +255,21 @@
       testimonial_1:'&ldquo;Impeccable service and fast hotel delivery.&rdquo; &mdash; Salma',
       testimonial_2:'&ldquo;Clean car, transparent pricing, no surprises.&rdquo; &mdash; Youssef',
       testimonial_3:'&ldquo;Very responsive 24/7 support, highly recommended.&rdquo; &mdash; Maria',
+      stats_title:'Our numbers say it all',
+      stats_subtitle:'Hundreds of completed trips each year with premium support.',
+      stat_vehicles:'Vehicles delivered this quarter',
+      stat_response:'Average WhatsApp response time',
+      stat_rating:'Average customer rating',
+      stat_support:'Assistance available',
+      services_title:'Services built for a smooth trip',
+      service_fleet_title:'Modern fleet',
+      service_fleet_text:'Curated city cars, compacts and SUVs maintained in-house.',
+      service_delivery_title:'Tailored delivery',
+      service_delivery_text:'Hotel, train station or airport: we deliver where you land.',
+      service_cover_title:'Reassuring coverage',
+      service_cover_text:'Insurance, assistance and on-demand options (baby seat, GPS, extra driver).',
+      service_process_title:'Fast process',
+      service_process_text:'Digital signature, flexible deposit and instant WhatsApp confirmation.',
       steps_title:'How your rental works',
       step_choose_title:'1. Choose',
       step_choose_text:'Pick a model for your dates from the fleet or via WhatsApp.',
@@ -369,6 +407,7 @@
       nav_booking:'\u0627\u0644\u062d\u062c\u0632',
       nav_about:'\u0645\u0646 \u0646\u062d\u0646',
       nav_contact:'\u0627\u062a\u0635\u0644 \u0628\u0646\u0627',
+      nav_privacy:'\u0627\u0644\u062e\u0635\u0648\u0635\u064a\u0629',
       skip_to_content:'\u0627\u0644\u0627\u0646\u062a\u0642\u0627\u0644 \u0625\u0644\u0649 \u0627\u0644\u0645\u062d\u062a\u0648\u0649',
       nav_toggle_label:'\u062a\u0628\u062f\u064a\u0644 \u0627\u0644\u0642\u0627\u0626\u0645\u0629',
       hero_title:'\u062a\u0623\u062c\u064a\u0631 \u0633\u064a\u0627\u0631\u0627\u062a \u0641\u064a \u0645\u0643\u0646\u0627\u0633 &mdash; \u0628\u0633\u0631\u0639\u0629 \u0648\u0628\u0633\u0647\u0648\u0644\u0629 \u0648\u0645\u0648\u062b\u0648\u0642\u064a\u0629.',
@@ -384,6 +423,21 @@
       testimonial_1:'&laquo;&nbsp;\u062e\u062f\u0645\u0629 \u0645\u062a\u0643\u0627\u0645\u0644\u0629 \u0648\u062a\u0648\u0635\u064a\u0644 \u0633\u0631\u064a\u0639 \u0625\u0644\u0649 \u0627\u0644\u0641\u0646\u062f\u0642.&nbsp;&raquo; &mdash; \u0633\u0644\u0645\u0649',
       testimonial_2:'&laquo;&nbsp;\u0633\u064a\u0627\u0631\u0629 \u0646\u0638\u064a\u0641\u0629 \u0648\u0623\u0633\u0639\u0627\u0631 \u0648\u0627\u0636\u062d\u0629 \u062f\u0648\u0646 \u0645\u0641\u0627\u062c\u0622\u062a.&nbsp;&raquo; &mdash; \u064a\u0648\u0633\u0641',
       testimonial_3:'&laquo;&nbsp;\u062f\u0639\u0645 \u0633\u0627\u0639\u0627\u062a\u064a \u0645\u062a\u0648\u0627\u062c\u062f \u0628\u0633\u0631\u0639\u0629. \u0623\u0646\u0635\u062d \u0628\u0647\u0627.&nbsp;&raquo; &mdash; \u0645\u0627\u0631\u064a\u0627',
+      stats_title:'\u0623\u0631\u0642\u0627\u0645\u0646\u0627 \u062a\u062a\u062d\u062f\u062b \u0639\u0646 \u062c\u0648\u062f\u0629 \u062e\u062f\u0645\u062a\u0646\u0627',
+      stats_subtitle:'\u0645\u0626\u0627\u062a \u0627\u0644\u0631\u062d\u0644\u0627\u062a \u0627\u0644\u0645\u0643\u062a\u0645\u0644\u0629 \u0643\u0644 \u0639\u0627\u0645 \u0645\u0639 \u0645\u062a\u0627\u0628\u0639\u0629 \u0648\u062f\u0639\u0645 \u0645\u0645\u064a\u0632.',
+      stat_vehicles:'\u0633\u064a\u0627\u0631\u0627\u062a \u0645\u0633\u0644\u0651\u0645\u0629 \u0647\u0630\u0627 \u0627\u0644\u0631\u0628\u0639',
+      stat_response:'\u0645\u062a\u0648\u0633\u0637 \u0648\u0642\u062a \u0627\u0644\u0631\u062f \u0639\u0644\u0649 \u0648\u0627\u062a\u0633\u0627\u0628',
+      stat_rating:'\u062a\u0642\u064a\u064a\u0645 \u0627\u0644\u0639\u0645\u0644\u0627\u0621',
+      stat_support:'\u0627\u0644\u062f\u0639\u0645 \u0645\u062a\u0627\u062d',
+      services_title:'\u062e\u062f\u0645\u0627\u062a \u0645\u064f\u0647\u064a\u0651\u0623\u0629 \u0644\u0631\u062d\u0644\u0629 \u0633\u0644\u0633\u0629',
+      service_fleet_title:'\u0623\u0633\u0637\u0648\u0644 \u062d\u062f\u064a\u062b',
+      service_fleet_text:'\u0627\u062e\u062a\u064a\u0627\u0631 \u062f\u0642\u064a\u0642 \u0644\u0633\u064a\u0627\u0631\u0627\u062a \u0627\u0644\u0645\u062f\u064a\u0646\u0629 \u0648\u0627\u0644\u0645\u062f\u0645\u062c\u0629 \u0648\u0640SUV \u0645\u0639 \u0635\u064a\u0627\u0646\u0629 \u062f\u0627\u062e\u0644\u064a\u0629.',
+      service_delivery_title:'\u062a\u0633\u0644\u064a\u0645 \u0645\u062e\u0635\u0651\u0635',
+      service_delivery_text:'\u0641\u0646\u062f\u0642\u060c \u0645\u062d\u0637\u0629 \u0623\u0648 \u0645\u0637\u0627\u0631: \u0646\u064f\u0633\u0644\u0651\u0645 \u0627\u0644\u0633\u064a\u0627\u0631\u0629 \u062d\u064a\u062b \u062a\u0635\u0644.',
+      service_cover_title:'\u062a\u063a\u0637\u064a\u0629 \u0645\u0637\u0645\u0626\u0646\u0629',
+      service_cover_text:'\u062a\u0623\u0645\u064a\u0646\u060c \u0645\u0633\u0627\u0639\u062f\u0629 \u0648\u062e\u064a\u0627\u0631\u0627\u062a \u0625\u0636\u0627\u0641\u064a\u0629 (\u0645\u0642\u0639\u062f \u0637\u0641\u0644\u060c GPS\u060c \u0633\u0627\u0626\u0642 \u0625\u0636\u0627\u0641\u064a).',
+      service_process_title:'\u0625\u062c\u0631\u0627\u0621\u0627\u062a \u0633\u0631\u064a\u0639\u0629',
+      service_process_text:'\u062a\u0648\u0642\u064a\u0639 \u0631\u0642\u0645\u064a\u060c \u0639\u0631\u0628\u0648\u0646 \u0645\u0631\u0646 \u0648\u062a\u0623\u0643\u064a\u062f \u0641\u0648\u0631\u064a \u0639\u0628\u0631 \u0648\u0627\u062a\u0633\u0627\u0628.',
       steps_title:'\u0643\u064a\u0641 \u062a\u062a\u0645 \u0639\u0645\u0644\u064a\u0629 \u0627\u0644\u062a\u0623\u062c\u064a\u0631',
       step_choose_title:'\u0661. \u0627\u062e\u062a\u0631',
       step_choose_text:'\u0627\u062e\u062a\u0631 \u0627\u0644\u0645\u0648\u062f\u064a\u0644 \u0648\u0627\u0644\u062a\u0648\u0627\u0631\u064a\u062e \u0639\u0628\u0631 \u0627\u0644\u0645\u0648\u0642\u0639 \u0623\u0648 \u0648\u0627\u062a\u0633\u0627\u0628.',
@@ -623,7 +677,7 @@
       if(!response.ok) throw new Error(`http ${response.status}`);
       const json = await response.json();
       const list = Array.isArray(json) ? json : [];
-      carCache = sanitiseCars(list);
+      carCache = list.length ? sanitiseCars(list) : FALLBACK_CARS.slice();
     }catch{
       carCache = FALLBACK_CARS.slice();
     }
@@ -673,6 +727,10 @@
     const card = document.createElement('article');
     card.className = 'card';
     card.setAttribute('data-animate','');
+    if(document.body && document.body.classList.contains('js-ready')){
+      // When cards are re-rendered after the initial page load (e.g., language switch), ensure they stay visible.
+      card.classList.add('is-visible');
+    }
     const img = document.createElement('img');
     img.className = 'media';
     img.loading = 'lazy';
@@ -794,15 +852,17 @@
     const ordered = [];
     const seen = new Set();
 
+    const source = Array.isArray(cars) && cars.length ? cars : FALLBACK_CARS.slice();
+
     FEATURED_PRIORITIES.forEach(id=>{
-      const car = cars.find(item=>item.id === id);
+      const car = source.find(item=>item.id === id);
       if(car && !seen.has(car.id)){
         ordered.push(car);
         seen.add(car.id);
       }
     });
 
-    cars.forEach(car=>{
+    source.forEach(car=>{
       if(car && !seen.has(car.id)){
         ordered.push(car);
         seen.add(car.id);
@@ -855,6 +915,9 @@
   }
 
   function applyFleetFilters(cars, filters){
+    if(!Array.isArray(cars) || !cars.length){
+      return [];
+    }
     return cars.filter(car=>{
       if(filters.segment !== 'all' && car.segment !== filters.segment) return false;
       if(filters.gearbox !== 'all' && car.gearbox !== filters.gearbox) return false;
@@ -894,7 +957,7 @@
     if(!filtered.length){
       const empty = document.createElement('p');
       empty.className = 'muted';
-      empty.textContent = currentDict().no_results || 'Aucun véhicule disponible.';
+      empty.textContent = currentDict().no_results || 'Aucun v\u00e9hicule disponible.';
       grid.appendChild(empty);
     }else{
       filtered.forEach(car=>{
@@ -1211,15 +1274,22 @@
       const car = carSel.value || '';
       const days = daysSel.value || '';
       const phone = phoneSel.value || '212663650333';
-      const message = [
-        'Bonjour,',
-        'Je souhaite réserver une voiture.',
-        '',
-        `*Modèle:* ${car}`,
-        `*Durée:* ${days} jours`,
-        '',
-        'Merci de me confirmer la disponibilité.'
-      ].join('\n');
+      const lang = getLang();
+      const tpl = WA_TEMPLATES[lang] || WA_TEMPLATES.fr;
+      const lines = [tpl.greeting, tpl.intent];
+      const details = [];
+      if(car){
+        details.push(`${tpl.model} ${car}`);
+      }
+      if(days){
+        const dayLabel = Number(days) > 1 ? tpl.days : tpl.day;
+        details.push(`${tpl.duration} ${days} ${dayLabel}`.trim());
+      }
+      if(details.length){
+        lines.push('', ...details);
+      }
+      lines.push('', tpl.thanks);
+      const message = lines.filter(Boolean).join('\\n');
       const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
       window.open(url, '_blank');
     });
