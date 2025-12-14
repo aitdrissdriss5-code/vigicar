@@ -1,271 +1,536 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VIGICAR Rent &mdash; Privacy Policy</title>
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="/legal/privacy.html">
-  <link rel="icon" type="image/png" href="../img/logo.png">
-  <link rel="shortcut icon" href="../favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="index,follow" />
+  <meta name="color-scheme" content="light dark" />
+  <title>VIGICAR Rent — Privacy Policy</title>
+
   <style>
-    /* Page-specific polish for a clear, review-friendly layout */
-    body{background:radial-gradient(1200px 700px at 12% 8%, rgba(233,165,0,.08), transparent 40%), var(--bg);}
-    .policy-hero{
-      display:grid;
-      gap:1rem;
-      background:linear-gradient(135deg, #0c1325 0%, #0f1a33 45%, #111c34 65%, #16233b 100%);
-      color:#e2e8f0;
-      border:1px solid rgba(255,255,255,.14);
-      box-shadow:0 28px 60px rgba(12,19,37,.35);
+    :root{
+      --bg: #0b1220;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --muted2: rgba(255,255,255,.60);
+      --border: rgba(255,255,255,.14);
+      --accent: #4ea1ff;
+      --accent2:#7c5cff;
+      --good:#3ddc97;
+      --warn:#ffcc66;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --maxw: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
     }
-    .policy-hero h1{color:#fff; margin-bottom:.25rem; letter-spacing:.2px}
-    .policy-hero p.lead{font-size:1.05rem; color:#dbeafe; max-width:780px}
-    .policy-meta{display:flex; flex-wrap:wrap; gap:.6rem}
-    .pill{display:inline-flex; align-items:center; gap:.35rem; padding:.35rem .65rem; border-radius:999px; background:rgba(255,255,255,.08); color:#e0e7ff; font-weight:600; letter-spacing:.1px; border:1px solid rgba(255,255,255,.12)}
-    .highlights{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:.85rem; margin-top:.4rem}
-    .highlight{background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); border-radius:14px; padding:.9rem 1rem; color:#f1f5f9; box-shadow:0 10px 24px rgba(0,0,0,.18)}
-    .highlight strong{color:#fff; letter-spacing:.15px}
 
-    .section-label{display:inline-flex; align-items:center; gap:.35rem; padding:.25rem .65rem; border-radius:999px; background:#fff; color:#0f172a; font-weight:700; letter-spacing:.2px; border:1px solid #e4eaf3; box-shadow:0 10px 24px rgba(12,19,37,.08)}
-    .summary-grid{display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); margin-top:1rem}
-    .summary-card{background:linear-gradient(180deg,#ffffff,#f7f9ff); border:1px solid #e3e8f2; border-radius:16px; padding:1rem 1.05rem; box-shadow:0 14px 32px rgba(12,19,37,.08)}
-    .summary-card strong{display:block; margin-bottom:.25rem; color:#0f172a}
-    .summary-card ul{margin:.2rem 0 0; padding-left:1.1rem; color:#475569}
-    .summary-card li{color:#1f2937}
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f6f8fc;
+        --card:#ffffff;
+        --card2:#f3f6ff;
+        --text: rgba(10,15,30,.92);
+        --muted: rgba(10,15,30,.70);
+        --muted2: rgba(10,15,30,.58);
+        --border: rgba(10,15,30,.12);
+        --accent:#1b67ff;
+        --accent2:#6a4dff;
+        --shadow: 0 18px 60px rgba(10,15,30,.10);
+      }
+    }
 
-    .policy-grid{display:grid; gap:1rem; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr))}
-    .policy-card{background:var(--surface); border:1px solid #e4eaf3; border-radius:18px; padding:1.2rem 1.25rem; box-shadow:0 16px 36px rgba(12,19,37,.08); position:relative; overflow:hidden; color:#0f172a}
-    .policy-card h3{margin-top:0; margin-bottom:.35rem; letter-spacing:.2px}
-    .policy-card p{margin:.2rem 0 .4rem; color:#1f2937}
-    .policy-list li{color:#1f2937}
-    .policy-card::before{content:""; position:absolute; inset:-18% 55% auto -40%; height:160px; background:radial-gradient(220px 180px at 50% 50%, rgba(233,165,0,.12), rgba(233,165,0,0)); opacity:.6; pointer-events:none}
-    .policy-list{padding-left:1.2rem; margin:.35rem 0}
-    .stat-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:.75rem; margin-top:.6rem}
-    .stat{background:linear-gradient(180deg,#0f172a,#0b1220); color:#e2e8f0; border:1px solid #1f2a44; border-radius:14px; padding:.85rem 1rem; box-shadow:0 16px 32px rgba(12,19,37,.2)}
-    .stat strong{display:block; font-size:1.05rem; color:#f1f5f9}
-    .stat span{color:#cbd5e1; font-size:.95rem}
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: var(--sans);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(78,161,255,.25), transparent 60%),
+        radial-gradient(900px 600px at 90% 0%, rgba(124,92,255,.22), transparent 60%),
+        radial-gradient(1000px 700px at 50% 110%, rgba(61,220,151,.16), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
 
-    .contact-block{background:linear-gradient(180deg, #0c1325, #0f172a); color:#e2e8f0; border:1px solid rgba(255,255,255,.12); border-radius:18px; padding:1.2rem 1.3rem; box-shadow:0 18px 40px rgba(12,19,37,.22)}
-    .contact-block strong{color:#fff}
-    .contact-block a{color:#f3b500}
+    a{ color: var(--accent); text-decoration:none; }
+    a:hover{ text-decoration: underline; }
+    .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 28px 18px 56px; }
+    .topbar{
+      display:flex; gap:14px; align-items:center; justify-content:space-between;
+      padding: 18px 18px;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, var(--card2), var(--card));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 14px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 10;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px; min-width: 240px;
+    }
+    .logo{
+      width: 40px; height: 40px; border-radius: 14px;
+      background:
+        radial-gradient(14px 14px at 30% 30%, rgba(255,255,255,.55), transparent 60%),
+        linear-gradient(135deg, var(--accent), var(--accent2));
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow: 0 10px 28px rgba(0,0,0,.25);
+      flex: 0 0 auto;
+    }
+    .brand h1{
+      margin:0; font-size: 16px; letter-spacing:.2px;
+    }
+    .brand .sub{
+      margin:2px 0 0; font-size: 12px; color: var(--muted);
+    }
+
+    .nav{
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 9px 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      border-radius: 999px;
+      font-size: 12.5px;
+      color: var(--muted);
+      transition: transform .12s ease, background .12s ease;
+      user-select:none;
+    }
+    .pill:hover{ background: rgba(255,255,255,.07); transform: translateY(-1px); text-decoration:none; }
+    .dot{
+      width:7px; height:7px; border-radius:50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(78,161,255,.18);
+    }
+
+    header.hero{
+      margin-top: 18px;
+      padding: 26px 20px 18px;
+    }
+    .heroCard{
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px 20px;
+      overflow:hidden;
+      position: relative;
+    }
+    .heroCard:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(600px 200px at 20% 0%, rgba(78,161,255,.18), transparent 60%),
+                  radial-gradient(600px 200px at 80% 0%, rgba(124,92,255,.16), transparent 60%);
+      pointer-events:none;
+    }
+    .heroInner{ position:relative; z-index:1; }
+    .heroTitle{
+      margin: 0 0 6px;
+      font-size: 26px;
+      letter-spacing: .2px;
+    }
+    .meta{
+      display:flex; flex-wrap:wrap; gap:10px 14px; align-items:center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 6px;
+    }
+    .tag{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--border);
+    }
+    .tag b{ color: var(--text); font-weight:600; }
+    .kbd{
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 16px;
+      margin-top: 18px;
+    }
+    @media (max-width: 980px){
+      .grid{ grid-template-columns: 1fr; }
+      .topbar{ position: static; }
+      .brand{ min-width: unset; }
+    }
+
+    section.card{
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px 18px;
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 16px;
+      letter-spacing: .2px;
+    }
+    .small{ color: var(--muted); font-size: 13px; margin: 0 0 14px; }
+    .list{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .list li{ margin: 7px 0; }
+    .divider{ height:1px; background: var(--border); margin: 14px 0; }
+
+    .callout{
+      border: 1px dashed rgba(78,161,255,.45);
+      background: rgba(78,161,255,.08);
+      border-radius: var(--radius2);
+      padding: 12px 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .callout strong{ color: var(--text); }
+
+    .goodbox{
+      border: 1px solid rgba(61,220,151,.35);
+      background: rgba(61,220,151,.08);
+      border-radius: var(--radius2);
+      padding: 12px 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .goodbox strong{ color: var(--text); }
+
+    .table{
+      width:100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      overflow:hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius2);
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .table th, .table td{
+      padding: 12px 12px;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border);
+    }
+    .table th{
+      text-align:left;
+      font-size: 12px;
+      letter-spacing: .3px;
+      text-transform: uppercase;
+      color: var(--muted2);
+      background: rgba(255,255,255,.04);
+      width: 34%;
+    }
+    .table tr:last-child td, .table tr:last-child th{ border-bottom: none; }
+
+    footer{
+      margin-top: 18px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Print-friendly for reviewers */
+    @media print{
+      body{ background: #fff !important; color:#111 !important; }
+      .topbar{ position: static; box-shadow:none; }
+      .heroCard, section.card, footer{ box-shadow:none; }
+      a{ color:#111; text-decoration: underline; }
+      .pill, .tag, .logo{ box-shadow:none; }
+      .wrap{ max-width: 100%; padding: 0; }
+    }
   </style>
 </head>
+
 <body>
-  <a href="#main" class="skip-link">Skip to content</a>
-  <header class="navbar" role="banner">
-    <div class="container inner">
-      <a class="brand" href="../index.html" aria-label="VIGICAR Rent">
-        <img id="brand-logo" src="../img/logo.png" alt="Logo VIGICAR Rent" width="40" height="40">
-        <strong>VIGICAR Rent</strong>
-      </a>
-      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav id="primary-nav" class="nav-links" aria-label="Main navigation">
-        <a href="../index.html">Home</a>
-        <a href="../fleet.html">Fleet</a>
-        <a href="../pricing.html">Pricing</a>
-        <a href="../booking.html" class="cta">Booking</a>
-        <a href="../about.html">About</a>
-        <a href="../contact.html">Contact</a>
-        <a href="./privacy.html" class="nav-legal" aria-current="page">Privacy</a>
-        <button id="lang-toggle" class="lang-toggle" type="button">FR</button>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main" class="section container">
-    <section class="section-card policy-hero" data-animate>
-      <div>
-        <h1>Privacy Policy</h1>
-        <p class="pill">Last updated: December 2025</p>
-        <p class="lead">Transparent, offline-first, and built without accounts. This page explains exactly how the VIGICAR Rent app handles your data for Google Play review and for our users.</p>
-        <div class="policy-meta">
-          <span class="pill">No account</span>
-          <span class="pill">No analytics or ads</span>
-          <span class="pill">Works offline</span>
-          <span class="pill">Data stays on device</span>
-        </div>
-        <div class="highlights">
-          <div class="highlight"><strong>Storage</strong><br>Rental PDF saved locally on your device storage only.</div>
-          <div class="highlight"><strong>Connectivity</strong><br>Offline by default; no background network calls.</div>
-          <div class="highlight"><strong>Control</strong><br>Calls/WhatsApp/Maps launch only when you tap.</div>
-          <div class="highlight"><strong>Backup</strong><br>Any cloud backup depends on your device settings.</div>
+  <div class="wrap">
+    <div class="topbar" role="navigation" aria-label="Privacy Policy navigation">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>VIGICAR Rent — Privacy Policy</h1>
+          <div class="sub">Clear, offline-first, no accounts.</div>
         </div>
       </div>
-    </section>
 
-    <section class="section-card" data-animate>
-      <span class="section-label">Quick summary</span>
-      <div class="summary-grid">
-        <div class="summary-card">
-          <strong>Data handling</strong>
-          <ul>
-            <li>No account or signup.</li>
-            <li>No analytics, ads, or trackers.</li>
-            <li>No data sent to external servers.</li>
-          </ul>
-        </div>
-        <div class="summary-card">
-          <strong>Storage</strong>
-          <ul>
-            <li>Booking info used only to generate a PDF.</li>
-            <li>PDF saved locally on your device.</li>
-            <li>Any cloud backup depends on your device settings.</li>
-          </ul>
-        </div>
-        <div class="summary-card">
-          <strong>Connectivity</strong>
-          <ul>
-            <li>Works fully offline.</li>
-            <li>No background network calls.</li>
-            <li>Calls/WhatsApp/Maps launch only when you tap.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-card" data-animate>
-      <div class="policy-grid">
-        <article class="policy-card">
-          <h3>About This App</h3>
-          <p>The VIGICAR Rent mobile application allows customers to view available cars, read car details, fill in a booking form, and generate a rental contract in PDF format that is stored locally on the device. The app runs without accounts and does not send your personal data to our servers.</p>
-        </article>
-
-        <article class="policy-card">
-          <h3>No Data Collection</h3>
-          <p>This app does not collect, store, or share any personal or sensitive data on external servers. All booking details you enter (name, phone number, pickup date, pickup time, location, and rental options) stay only on your device and are used exclusively to create the PDF contract.</p>
-          <ul class="policy-list">
-            <li>No analytics</li>
-            <li>No ads or trackers</li>
-            <li>No background network calls</li>
-          </ul>
-        </article>
-
-        <article class="policy-card">
-          <h3>Local Functionality</h3>
-          <p>The app works fully offline for browsing, booking, and PDF generation. The rental contract is saved locally in your device storage. You are responsible for printing, signing, and presenting the contract when picking up the car.</p>
-          <p>No data is uploaded to our servers. If your device uses system-level backups (for example, cloud backups), the handling of your locally saved PDF follows your device settings.</p>
-        </article>
-
-        <article class="policy-card">
-          <h3>Data Retention and Control</h3>
-          <p>Your booking inputs are used only to generate the PDF contract on your device. The PDF stays on your local storage until you delete it or uninstall the app, after which it is removed from the device. We do not keep copies of your data.</p>
-          <p>If you reinstall the app, previous locally stored PDFs are not restored unless they were backed up by your device settings.</p>
-        </article>
-
-        <article class="policy-card">
-          <h3>Google Play Data Safety Summary</h3>
-          <p>Data shared: None. Data collected: None. All data you enter stays on your device to generate the rental PDF.</p>
-          <ul class="policy-list">
-            <li>Processing: On-device only; no background network calls.</li>
-            <li>Storage: Rental PDF saved locally; deletion is under your control.</li>
-            <li>Permissions: Uses storage/file access solely to save the PDF you request.</li>
-            <li>Communication: Dialer, WhatsApp, and Maps open only when you tap; no automatic sending.</li>
-          </ul>
-          <p>This description matches the Google Play Data Safety section for VIGICAR Rent.</p>
-        </article>
-
-        <article class="policy-card">
-          <h3>User-Initiated Communication</h3>
-          <p>The app provides buttons that, when tapped by you, open your phone dialer, WhatsApp, or Google Maps using our public contact details. These actions are optional and occur only when you choose to start them. The app does not send or transfer your data in the background.</p>
-        </article>
-
-        <article class="policy-card">
-          <h3>Third-Party Services</h3>
-          <p>If you choose to interact with WhatsApp, your dialer, or Google Maps, those services are provided by third parties. Please review their privacy policies to understand how they handle your information.</p>
-        </article>
-
-        <article class="policy-card">
-          <h3>Children's Privacy</h3>
-          <p>This app is intended for adults who rent vehicles. We do not knowingly collect or process information from children under 13.</p>
-        </article>
-
-        <article class="policy-card">
-          <h3>Changes to This Policy</h3>
-          <p>We may update this Privacy Policy to meet legal requirements or improve clarity. The latest version will always be available inside the app and on our official website. Continued use of the app after an update means you accept the updated terms.</p>
-        </article>
-      </div>
-      <div class="stat-row">
-        <div class="stat">
-          <strong>0 trackers</strong>
-          <span>No SDKs for ads, analytics, crash reporting, or profiling.</span>
-        </div>
-        <div class="stat">
-          <strong>100% offline</strong>
-          <span>Browsing, booking, and PDF creation work without internet.</span>
-        </div>
-        <div class="stat">
-          <strong>User-initiated only</strong>
-          <span>Dialer, WhatsApp, and Maps open solely when you choose.</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-card contact-block" data-animate>
-      <h3>Contact Us</h3>
-      <p><strong>VIGICAR Rent</strong><br>
-        MAG N 1 BLOC B RESIDENCE KAOUTAR RUE CHEFCHAOUEN, Meknes (M), Morocco<br>
-        D-U-N-S: 536161668<br>
-        Phone: <a href="tel:+212664650479">+212664650479</a><br>
-        Email: <a href="mailto:contact@vigicar.it.com">contact@vigicar.it.com</a><br>
-        Support: <a href="mailto:support@vigicar.it.com">support@vigicar.it.com</a>
-      </p>
-    </section>
-  </main>
-
-  <footer role="contentinfo" class="site-footer">
-    <div class="container footer-hero">
-      <div>
-        <p class="eyebrow">Toujours disponibles</p>
-        <h2>Parlons de votre prochaine location</h2>
-        <p>Assistance 24/7, r&eacute;ponse rapide sur WhatsApp ou t&eacute;l&eacute;phone.</p>
-      </div>
-      <div class="footer-actions">
-        <a class="btn whatsapp" href="https://wa.me/212663650333" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn primary" href="tel:+212663650333">Appeler VIGICAR Rent</a>
+      <div class="nav">
+        <a class="pill" href="#overview"><span class="dot"></span> Overview</a>
+        <a class="pill" href="#data"><span class="dot"></span> Data</a>
+        <a class="pill" href="#storage"><span class="dot"></span> Storage</a>
+        <a class="pill" href="#control"><span class="dot"></span> Control</a>
+        <a class="pill" href="#third"><span class="dot"></span> Third-Party</a>
+        <a class="pill" href="#contact"><span class="dot"></span> Contact</a>
       </div>
     </div>
-    <div class="container footer-grid">
-      <div class="footer-card">
-        <div class="brand-minimal">
-          <img src="../img/logo.png" alt="Logo VIGICAR Rent" width="48" height="48" loading="lazy">
-          <strong>VIGICAR Rent &mdash; Location de voitures &agrave; Mekn&egrave;s</strong>
-        </div>
-        <p>T&eacute;l: <a href="tel:+212663650333">+212 6 63 650 333</a> / <a href="tel:+212660946555">+212 6 60 94 65 55</a> &middot; WhatsApp: <a href="https://wa.me/212663650333" target="_blank" rel="noopener">wa.me/212663650333</a> / <a href="https://wa.me/212660946555" target="_blank" rel="noopener">wa.me/212660946555</a><br>Email: <a href="mailto:vigicar@gmail.com">vigicar@gmail.com</a><br>Adresse: Mag N&deg;1, R&eacute;sidence Kaoutar, Rue Chefchaouen, Ville Nouvelle, Mekn&egrave;s, Maroc</p>
-      </div>
-      <div class="footer-card">
-        <h4>Liens rapides</h4>
-        <nav>
-          <a href="../index.html">Accueil</a><br>
-          <a href="../fleet.html">Notre flotte</a><br>
-          <a href="../pricing.html">Tarifs</a><br>
-          <a href="../booking.html">R&eacute;servation</a><br>
-          <a href="../about.html">&Agrave; propos</a><br>
-          <a href="../contact.html">Contact</a>
-        </nav>
-      </div>
-      <div class="footer-card">
-        <h4>Contacts directs</h4>
-        <p><a href="tel:+212663650333">+212 6 63 650 333</a><br><a href="tel:+212660946555">+212 6 60 94 65 55</a></p>
-        <p><a href="https://wa.me/212663650333" target="_blank" rel="noopener">WhatsApp principal</a><br><a href="https://wa.me/212660946555" target="_blank" rel="noopener">WhatsApp agence</a></p>
-      </div>
-      <div class="footer-card">
-        <h4>Horaires</h4>
-        <p>Lun&ndash;Dim : 08:00&ndash;22:00</p>
-        <p>Service d'urgence 24/7</p>
-      </div>
-    </div>
-    <div class="container copy"><span id="footer-year"></span> <span>VIGICAR Rent &mdash; Tous droits r&eacute;serv&eacute;s.</span></div>
-  </footer>
 
-  <script src="../js/main.js" defer></script>
+    <header class="hero">
+      <div class="heroCard">
+        <div class="heroInner">
+          <h2 class="heroTitle">Privacy Policy</h2>
+
+          <div class="meta" aria-label="Document metadata">
+            <span class="tag"><b>Last updated:</b> December 2025</span>
+            <span class="tag"><b>Accounts:</b> None</span>
+            <span class="tag"><b>Ads/Analytics:</b> None</span>
+            <span class="tag"><b>Network:</b> Offline by default</span>
+            <span class="tag"><b>Processing:</b> On-device only</span>
+          </div>
+
+          <p class="small" style="margin-top:12px;">
+            This page explains how the <b>VIGICAR Rent</b> app handles user data for Google Play review and for our users.
+            For quick scanning, see the <span class="kbd">Overview</span> and <span class="kbd">Data Summary</span> sections.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- MAIN CONTENT -->
+      <main>
+        <section id="overview" class="card">
+          <h2>Overview</h2>
+          <p class="small">
+            VIGICAR Rent is designed to be transparent and offline-first. The app works without user accounts and does not use ads, analytics, or trackers.
+          </p>
+
+          <div class="goodbox" role="note">
+            <strong>Key points:</strong> No accounts • No ads/analytics • No background network activity • Data stays on your device.
+          </div>
+
+          <div class="divider"></div>
+
+          <ul class="list">
+            <li><b>No account:</b> the app does not require sign-up or login.</li>
+            <li><b>No analytics/ads:</b> no SDKs for ads, analytics, crash reporting, or profiling.</li>
+            <li><b>Offline-first:</b> rental details and PDF generation work without internet.</li>
+            <li><b>User-initiated actions only:</b> phone/WhatsApp/Maps open only when you tap.</li>
+          </ul>
+        </section>
+
+        <section id="data" class="card" style="margin-top:16px;">
+          <h2>Data Collection and Use</h2>
+          <p class="small">
+            VIGICAR Rent collects <b>user-provided</b> information <b>on the device</b> when you fill the rental details form.
+            The app does <b>not</b> send this data to our servers or to third parties automatically.
+          </p>
+
+          <div class="callout" role="note">
+            <strong>Important:</strong> “On-device only” still means the app <b>collects</b> the data you type in. It just stays local and is not transmitted in the background.
+          </div>
+
+          <table class="table" aria-label="Data summary">
+            <tr>
+              <th>Data the user enters</th>
+              <td>
+                Full name, phone number, pickup date &amp; time, pickup location (text), rental duration, and selected options.
+              </td>
+            </tr>
+            <tr>
+              <th>Why it is used</th>
+              <td>App functionality: to generate the rental contract PDF requested by the user.</td>
+            </tr>
+            <tr>
+              <th>Shared with third parties</th>
+              <td><b>No.</b> The app does not transmit the entered data to external servers.</td>
+            </tr>
+            <tr>
+              <th>Sent to our servers</th>
+              <td><b>No.</b> We do not operate a server flow for this data.</td>
+            </tr>
+          </table>
+        </section>
+
+        <section id="storage" class="card" style="margin-top:16px;">
+          <h2>On-Device Processing and Storage</h2>
+          <p class="small">
+            All rental details are processed locally on your device. The generated rental contract is saved as a PDF file in your device storage.
+          </p>
+
+          <ul class="list">
+            <li><b>Processing:</b> on-device only.</li>
+            <li><b>Storage:</b> the PDF is saved locally on your device.</li>
+            <li><b>Copies:</b> we do not keep copies of your data.</li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <p class="small">
+            If your device uses system-level backups (for example, cloud backups), the handling of locally stored files follows your device settings and backup provider.
+          </p>
+        </section>
+
+        <section id="control" class="card" style="margin-top:16px;">
+          <h2>Connectivity, Retention, and Deletion</h2>
+          <p class="small">
+            The app works fully offline for viewing cars, entering rental details, and generating PDF documents.
+          </p>
+
+          <table class="table" aria-label="Retention and control">
+            <tr>
+              <th>Background network calls</th>
+              <td><b>None.</b> The app is offline by default and does not run background network requests.</td>
+            </tr>
+            <tr>
+              <th>User-initiated communication</th>
+              <td>Phone dialer, WhatsApp, and Google Maps open only when you tap the related button.</td>
+            </tr>
+            <tr>
+              <th>How to delete your data</th>
+              <td>
+                You can delete the generated PDF file from your device, and/or uninstall the app.
+                After deletion, VIGICAR Rent does not retain user data.
+              </td>
+            </tr>
+          </table>
+        </section>
+
+        <section id="third" class="card" style="margin-top:16px;">
+          <h2>Third-Party Services</h2>
+          <p class="small">
+            If you choose to open WhatsApp, your phone dialer, or Google Maps, those services are provided by third parties.
+            Please review their privacy policies to understand how they handle your information.
+          </p>
+
+          <ul class="list">
+            <li><b>WhatsApp:</b> opened only on user tap.</li>
+            <li><b>Phone dialer:</b> opened only on user tap.</li>
+            <li><b>Google Maps:</b> opened only on user tap.</li>
+          </ul>
+        </section>
+
+        <section class="card" style="margin-top:16px;">
+          <h2>Children’s Privacy</h2>
+          <p class="small">
+            This application is intended for adults. We do not knowingly collect or process information from children under the age of 13.
+          </p>
+        </section>
+
+        <section class="card" style="margin-top:16px;">
+          <h2>Changes to This Policy</h2>
+          <p class="small">
+            We may update this Privacy Policy to improve clarity or comply with legal requirements.
+            The latest version will always be available inside the app and on our official website.
+          </p>
+        </section>
+      </main>
+
+      <!-- SIDE PANEL (Reviewer-friendly) -->
+      <aside>
+        <section class="card" aria-label="Google Play data safety snapshot">
+          <h2>Google Play Data Safety Snapshot</h2>
+          <p class="small">
+            Quick, reviewer-friendly summary aligned with the app behavior.
+          </p>
+
+          <table class="table">
+            <tr>
+              <th>Accounts</th>
+              <td>None</td>
+            </tr>
+            <tr>
+              <th>Data collected</th>
+              <td>Name, phone number, and rental details entered by the user (on-device)</td>
+            </tr>
+            <tr>
+              <th>Data shared</th>
+              <td>None</td>
+            </tr>
+            <tr>
+              <th>Server transfer</th>
+              <td>None</td>
+            </tr>
+            <tr>
+              <th>Purpose</th>
+              <td>App functionality (PDF rental contract generation)</td>
+            </tr>
+            <tr>
+              <th>Deletion</th>
+              <td>User can delete the PDF and/or uninstall the app</td>
+            </tr>
+          </table>
+
+          <div class="divider"></div>
+
+          <div class="goodbox">
+            <strong>Offline-first:</strong> no background network calls. External apps open only on tap.
+          </div>
+        </section>
+
+        <section id="contact" class="card" style="margin-top:16px;">
+          <h2>Contact Us</h2>
+          <p class="small">If you have questions about this policy, contact us:</p>
+
+          <table class="table" aria-label="Contact details">
+            <tr>
+              <th>Company</th>
+              <td><b>VIGICAR Rent</b></td>
+            </tr>
+            <tr>
+              <th>Address</th>
+              <td>MAG N 1 BLOC B RESIDENCE KAOUTAR RUE CHEFCHAOUEN, Meknes (M), Morocco</td>
+            </tr>
+            <tr>
+              <th>D-U-N-S</th>
+              <td>536161668</td>
+            </tr>
+            <tr>
+              <th>Phone</th>
+              <td><a href="tel:+212664650479">+212 664 650 479</a></td>
+            </tr>
+            <tr>
+              <th>Email</th>
+              <td>
+                <a href="mailto:contact@vigicar.it.com">contact@vigicar.it.com</a><br/>
+                <span style="color:var(--muted2); font-size:12.5px;">Support:</span>
+                <a href="mailto:support@vigicar.it.com">support@vigicar.it.com</a>
+              </td>
+            </tr>
+          </table>
+
+          <p class="small" style="margin-top:12px;">
+            For Google Play reviewers: this page is intentionally structured for easy verification and consistency with the Data Safety form.
+          </p>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between;">
+        <div>© <span id="y"></span> VIGICAR Rent</div>
+        <div style="color:var(--muted2);">
+          Tip: Use your browser’s <b>Print</b> to save a PDF for Play Console evidence.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Tiny, safe enhancement: update year only.
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
