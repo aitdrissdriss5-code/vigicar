@@ -40,8 +40,15 @@
       extras:{gps:'\u062c\u0647\u0627\u0632 \u0645\u0644\u0627\u062d\u0629', baby:'\u0645\u0642\u0639\u062f \u0637\u0641\u0644', driver2:'\u0633\u0627\u0626\u0642 \u0625\u0636\u0627\u0641\u064a'}
     }
   };
+
+  const FEATURE_LABELS = {
+    fr:{AC:'Clim.', Airbag:'Airbag', Bluetooth:'Bluetooth', USB:'USB', '4x2':'4x2'},
+    en:{AC:'A/C', Airbag:'Airbag', Bluetooth:'Bluetooth', USB:'USB', '4x2':'4x2'},
+    ar:{AC:'\u0645\u0643\u064A\u0641', Airbag:'\u0648\u0633\u0627\u0626\u062F \u0647\u0648\u0627\u0626\u064A\u0629', Bluetooth:'\u0628\u0644\u0648\u062A\u0648\u062B', USB:'USB', '4x2':'4x2'}
+  };
+
   const PREVIEW_LABELS = {
-    fr:{rate:'Tarif', seats:'Places', bags:'Bagages', transmission:'Transmission', fuel:'Essence', features:'\u00C9quipements'},
+    fr:{rate:'Tarif', seats:'Places', bags:'Bagages', transmission:'Transmission', fuel:'Carburant', features:'\u00C9quipements'},
     en:{rate:'Rate', seats:'Seats', bags:'Bags', transmission:'Transmission', fuel:'Fuel', features:'Highlights'},
     ar:{rate:'\u0627\u0644\u0633\u0639\u0631', seats:'\u0639\u062f\u062f \u0627\u0644\u0645\u0642\u0627\u0639\u062f', bags:'\u0627\u0644\u0623\u0645\u062a\u0639\u0629', transmission:'\u0646\u0627\u0642\u0644 \u0627\u0644\u062d\u0631\u0643\u0629', fuel:'\u0627\u0644\u0648\u0642\u0648\u062f', features:'\u0623\u0628\u0631\u0632 \u0627\u0644\u0645\u0632\u0627\u064a\u0627'}
   };
@@ -491,14 +498,14 @@
       send_email:'\u0625\u0631\u0633\u0627\u0644 \u0628\u0627\u0644\u0628\u0631\u064a\u062f',
       cta_call:'\u0627\u062a\u0635\u0644 \u0628\u0640 VIGICAR',
       cta_whatsapp:'\u0627\u0644\u062f\u0631\u062f\u0634\u0629 \u0639\u0628\u0631 \u0648\u0627\u062a\u0633\u0627\u0628',
-      quick_wa_title:'\u1f4f2 \u0627\u062d\u062c\u0632 \u0633\u064a\u0627\u0631\u062a\u0643 \u0641\u0648\u0631\u0627\u064b \u0639\u0628\u0631 \u0648\u0627\u062a\u0633\u0627\u0628',
+      quick_wa_title:'&#x1F4F2; \u0627\u062d\u062c\u0632 \u0633\u064a\u0627\u0631\u062a\u0643 \u0641\u0648\u0631\u0627\u064b \u0639\u0628\u0631 \u0648\u0627\u062a\u0633\u0627\u0628',
       wa_badge:'\u0631\u062f \u062e\u0644\u0627\u0644 \u0623\u0642\u0644 \u0645\u0646 \u0633\u0627\u0639\u0629',
       wa_intro:'\u0627\u0630\u0643\u0631 \u0627\u0644\u0645\u0648\u062f\u064a\u0644 \u0648\u0627\u0644\u0645\u062f\u0629 \u0644\u0644\u062d\u0635\u0648\u0644 \u0639\u0644\u0649 \u0627\u0644\u0633\u0639\u0631 \u0648\u062a\u0623\u0643\u064a\u062f \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0641\u064a \u0645\u0643\u0646\u0627\u0633 \u0623\u0648 \u0627\u0644\u0645\u0637\u0627\u0631.',
       wa_highlight_delivery:'\u062a\u0633\u0644\u064a\u0645 \u0625\u0644\u0649 \u0627\u0644\u0641\u0646\u062f\u0642 \u0623\u0648 \u0627\u0644\u0645\u062d\u0637\u0629 \u0623\u0648 \u0645\u0637\u0627\u0631 \u0641\u0627\u0633.',
       wa_highlight_pricing:'\u0623\u0633\u0639\u0627\u0631 \u0648\u0627\u0636\u062d\u0629 \u0648\u062f\u0641\u0639 \u0645\u0631\u0646.',
       wa_highlight_support:'\u062f\u0639\u0645 24/7 \u0648\u062e\u064a\u0627\u0631\u0627\u062a \u0639\u0646\u062f \u0627\u0644\u0637\u0644\u0628.',
       send_whatsapp:'\u0625\u0631\u0633\u0627\u0644 \u0639\u0628\u0631 \u0648\u0627\u062a\u0633\u0627\u0628',
-      wa_note:'\u064a\u062a\u0645 \u0625\u0631\u0633\u0627\u0644 \u0637\u0644\u0628\u0643 \u0645\u0628\u0627\u0634\u0631\u0629 \u0625\u0644\u0649 \u0648\u0627\u062a\u0633\u0627\u0628 \u1f4f2',
+      wa_note:'\u064a\u062a\u0645 \u0625\u0631\u0633\u0627\u0644 \u0637\u0644\u0628\u0643 \u0645\u0628\u0627\u0634\u0631\u0629 \u0625\u0644\u0649 \u0648\u0627\u062a\u0633\u0627\u0628 &#x1F4F2;',
       benefits_title:'\u0643\u0644 \u0634\u064a\u0621 \u0645\u062c\u0647\u0632 \u0644\u0631\u0627\u062d\u062a\u0643',
       benefit_delivery_title:'\u062a\u0633\u0644\u064a\u0645 \u0645\u062e\u0635\u0635',
       benefit_delivery_text:'\u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u0633\u064a\u0627\u0631\u0629 \u0641\u064a \u0645\u0631\u0643\u0632 \u0645\u0643\u0646\u0627\u0633 \u0623\u0648 \u0627\u0644\u0641\u0646\u062f\u0642 \u0623\u0648 \u0645\u0628\u0627\u0634\u0631\u0629 \u0641\u064a \u0627\u0644\u0645\u0637\u0627\u0631.',
@@ -567,6 +574,214 @@
       footer_copy_label:'VIGICAR &mdash; \u0643\u0627\u0641\u0629 \u0627\u0644\u062d\u0642\u0648\u0642 \u0645\u062d\u0641\u0648\u0638\u0629.',
       validation_required:'\u0627\u0644\u062d\u0642\u0644 \u0645\u0637\u0644\u0648\u0628',
       validation_return:'\u064a\u062c\u0628 \u0623\u0646 \u064a\u0643\u0648\u0646 \u0627\u0644\u0625\u0631\u062c\u0627\u0639 \u0628\u0639\u062f \u0627\u0644\u0627\u0633\u062a\u0644\u0627\u0645'
+    }
+  };
+
+  const TEXT_FIXES = {
+    fr:{
+      segment:'Cat&eacute;gorie',
+      gearbox:'Transmission',
+      fuel:'Carburant',
+      hero_title:'Location de voitures &agrave; Mekn&egrave;s &mdash; service professionnel, rapide et fiable.',
+      hero_slogan:'La bonne voiture, au bon prix, au bon moment.',
+      service_process_text:'Signature rapide, acompte flexible et confirmation instantan&eacute;e via WhatsApp.',
+      step_receive_text:'Livraison &agrave; Mekn&egrave;s, &agrave; l&rsquo;a&eacute;roport de F&egrave;s ou &agrave; la gare selon votre planning.',
+      booking_intro:'Choisissez votre mod&egrave;le, indiquez la dur&eacute;e souhait&eacute;e et envoyez la demande sur WhatsApp pour une confirmation rapide.',
+      wa_intro:'Indiquez le mod&egrave;le et la dur&eacute;e pour recevoir le tarif et valider la livraison &agrave; Mekn&egrave;s ou &agrave; l&rsquo;a&eacute;roport.',
+      wa_note:'Votre demande part directement sur WhatsApp &#x1F4F2;',
+      quote_step3:'Nous r&eacute;pondons rapidement avec une offre adapt&eacute;e.',
+      conditions_item4:'Livraison gratuite &agrave; Mekn&egrave;s centre. Des frais peuvent s&rsquo;appliquer pour l&rsquo;a&eacute;roport de F&egrave;s ou la gare.',
+      photo_missing:'Photo &agrave; venir',
+      footer_cta_title:'Planifions votre prochaine location',
+      footer_cta_text:'Assistance 24/7, r&eacute;ponse rapide sur WhatsApp ou par t&eacute;l&eacute;phone.'
+    },
+    en:{
+      segment:'Category',
+      gearbox:'Transmission',
+      fuel:'Fuel',
+      hero_title:'Car rental in Meknes &mdash; professional, fast, reliable.',
+      hero_slogan:'The right car, at the right price, right on time.',
+      cta_whatsapp:'Chat on WhatsApp',
+      stats_title:'Our numbers speak for themselves',
+      stats_subtitle:'Hundreds of completed trips every year with premium support.',
+      service_delivery_text:'Hotel, train station or airport: we deliver the vehicle where you arrive.',
+      booking_intro:'Choose your model, select the rental duration and send the request on WhatsApp for quick confirmation.',
+      location_option_centre:'Meknes city center',
+      location_option_station:'Meknes train station',
+      location_option_airport:'Fes airport',
+      wa_intro:'Tell us the model and duration to receive pricing and confirm delivery in Meknes or at the airport.',
+      wa_highlight_delivery:'Delivery to your hotel, train station or Fes airport.',
+      benefit_delivery_text:'Vehicle handover in Meknes city center, at your hotel or directly at the airport.',
+      quote_include2:'Free delivery within Meknes city center.',
+      conditions_item4:'Free delivery within Meknes city center. Fees may apply for Fes airport or the train station.',
+      contact_address_text:'Shop No. 1, Residence Kaoutar, Rue Chefchaouen, Ville Nouvelle, Meknes, Morocco',
+      contact_map_title:'Meknes city center (map)',
+      about_intro_2:'We cover Meknes and nearby areas with 24/7 support for stress-free travel.',
+      about_list_1:'Free delivery in Meknes city center',
+      privacy_fr:'We only collect the information needed to process your booking: name, phone number, email and rental details. We do not share your data with third parties unless required by law. Contact <a href="mailto:vigicar@gmail.com">vigicar@gmail.com</a> to update or delete your data.',
+      privacy_en:'We only collect the information needed to process your booking: name, phone number, email and rental details. We do not share your data with third parties unless required by law. Contact <a href="mailto:vigicar@gmail.com">vigicar@gmail.com</a> to update or delete your data.',
+      terms_fr:'Your booking is confirmed after validation by VIGICAR. A security deposit may be requested when the vehicle is handed over. Additional drivers must be declared in advance.',
+      terms_en:'Your booking is confirmed after validation by VIGICAR. A security deposit may be requested when the vehicle is handed over. Additional drivers must be declared in advance.',
+      footer_company:'VIGICAR &mdash; Car rental in Meknes',
+      footer_contact_info:'Phone: <a href="tel:+212663650333">+212 6 63 650 333</a> / <a href="tel:+212660946555">+212 6 60 94 65 55</a> &middot; WhatsApp: <a href="https://wa.me/212663650333" target="_blank" rel="noopener">wa.me/212663650333</a> / <a href="https://wa.me/212660946555" target="_blank" rel="noopener">wa.me/212660946555</a><br>Email: <a href="mailto:vigicar@gmail.com">vigicar@gmail.com</a><br>Address: Shop No. 1, Residence Kaoutar, Rue Chefchaouen, Ville Nouvelle, Meknes, Morocco',
+      photo_missing:'Photo coming soon'
+    },
+    ar:{
+      segment:'\u0627\u0644\u0641\u0626\u0629',
+      gearbox:'\u0646\u0627\u0642\u0644 \u0627\u0644\u062D\u0631\u0643\u0629',
+      fuel:'\u0627\u0644\u0648\u0642\u0648\u062F',
+      hero_title:'تأجير سيارات في مكناس — خدمة احترافية وسريعة وموثوقة.',
+      hero_slogan:'السيارة المناسبة، بالسعر المناسب، وفي الوقت المناسب.',
+      nav_about:'من نحن',
+      badge_2:'تسليم في المطار أو الفندق',
+      badge_3:'دفع آمن',
+      featured:'سيارات مميزة',
+      testimonials:'آراء عملائنا',
+      stats_title:'أرقامنا تتحدث عنا',
+      stats_subtitle:'مئات الرحلات المكتملة سنوياً مع خدمة متابعة ممتازة.',
+      stat_vehicles:'سيارات تم تسليمها هذا الربع',
+      stat_response:'متوسط الرد على واتساب',
+      stat_rating:'تقييم العملاء',
+      stat_support:'دعم متوفر',
+      services_title:'خدمات مصممة لرحلة مريحة',
+      service_fleet_title:'أسطول حديث',
+      service_fleet_text:'اختيار متنوع من سيارات المدينة والسيارات العائلية وSUV مع صيانة دورية.',
+      service_delivery_title:'تسليم حسب رغبتك',
+      service_delivery_text:'الفندق أو المحطة أو المطار: نوصل السيارة إلى مكان وصولك.',
+      service_cover_title:'تغطية مطمئنة',
+      service_cover_text:'تأمين ومساعدة وخيارات عند الطلب مثل مقعد طفل، GPS، وسائق إضافي.',
+      service_process_title:'إجراءات سريعة',
+      service_process_text:'تأكيد سريع، عربون مرن، ومتابعة مباشرة عبر واتساب.',
+      steps_title:'كيف تتم عملية الكراء',
+      step_choose_title:'1. اختر',
+      step_choose_text:'اختر السيارة المناسبة لتواريخك من الأسطول أو عبر واتساب.',
+      step_confirm_title:'2. أكد',
+      step_confirm_text:'نؤكد التوفر والسعر والخيارات ثم نرسل لك الملخص.',
+      step_receive_title:'3. استلم',
+      step_receive_text:'التسليم في مكناس أو مطار فاس أو المحطة حسب برنامجك.',
+      step_enjoy_title:'4. استمتع',
+      step_enjoy_text:'مساعدة 24/7 طوال مدة الكراء وإرجاع سهل وسريع.',
+      cta_banner_title:'هل تحتاج سيارة اليوم؟',
+      cta_banner_text:'نقترح عليك حلاً مناسباً خلال أقل من ساعة داخل مكناس.',
+      cta_book_online:'احجز عبر الموقع',
+      cta_whatsapp_direct:'واتساب مباشر',
+      booking_intro:'اختر السيارة والمدة ثم أرسل الطلب عبر واتساب لتأكيد سريع.',
+      location_option_centre:'وسط مدينة مكناس',
+      location_option_station:'محطة قطار مكناس',
+      location_option_airport:'مطار فاس',
+      car_preview_placeholder:'اختر سيارة لعرض التفاصيل والسعر.',
+      booking_section_schedule:'التواريخ (اختياري)',
+      dates_optional_note:'أضف التواريخ إذا كانت معروفة، أو اتركها فارغة.',
+      quick_wa_title:'&#x1F4F2; احجز سيارتك فوراً عبر واتساب',
+      wa_intro:'أرسل لنا نوع السيارة والمدة للحصول على السعر وتأكيد التسليم في مكناس أو المطار.',
+      wa_note:'يتم إرسال طلبك مباشرة إلى واتساب &#x1F4F2;',
+      benefit_delivery_text:'تسليم السيارة في وسط مكناس أو في الفندق أو مباشرة في المطار.',
+      quote_how_title:'كيف تحصل على عرض سعر؟',
+      quote_includes_title:'ما يشمله السعر دائماً',
+      quote_include2:'توصيل مجاني داخل مدينة مكناس.',
+      deposit:'مبلغ الضمان',
+      deposit_note:'قد يُطلب مبلغ ضمان حسب السيارة والفترة، ويُرجع عند عدم وجود أي أضرار.',
+      contact_address_text:'المحل رقم 1، إقامة كوثر، شارع شفشاون، المدينة الجديدة، مكناس، المغرب',
+      about_list_3:'أسطول حديث ومعتنى به',
+      privacy_fr:'نقوم بجمع المعلومات الضرورية لمعالجة حجزك فقط: الاسم، رقم الهاتف، البريد الإلكتروني وتفاصيل الكراء. لا نشارك بياناتك مع أي طرف ثالث إلا إذا تطلب القانون ذلك. للتعديل أو الحذف تواصل معنا عبر <a href="mailto:vigicar@gmail.com">vigicar@gmail.com</a>.',
+      privacy_en:'نقوم بجمع المعلومات الضرورية لمعالجة حجزك فقط: الاسم، رقم الهاتف، البريد الإلكتروني وتفاصيل الكراء. لا نشارك بياناتك مع أي طرف ثالث إلا إذا تطلب القانون ذلك. للتعديل أو الحذف تواصل معنا عبر <a href="mailto:vigicar@gmail.com">vigicar@gmail.com</a>.',
+      terms_fr:'يتم تأكيد الحجز بعد موافقة VIGICAR. قد يُطلب مبلغ ضمان عند تسليم السيارة. يجب التصريح بأي سائق إضافي مسبقاً.',
+      terms_en:'يتم تأكيد الحجز بعد موافقة VIGICAR. قد يُطلب مبلغ ضمان عند تسليم السيارة. يجب التصريح بأي سائق إضافي مسبقاً.',
+      monsun:'كل يوم: 08:00-22:00',
+      footer_cta_title:'لنخطط لكرائك القادم',
+      footer_contact_info:'الهاتف: <a href="tel:+212663650333">+212 6 63 650 333</a> / <a href="tel:+212660946555">+212 6 60 94 65 55</a> &middot; واتساب: <a href="https://wa.me/212663650333" target="_blank" rel="noopener">wa.me/212663650333</a> / <a href="https://wa.me/212660946555" target="_blank" rel="noopener">wa.me/212660946555</a><br>البريد: <a href="mailto:vigicar@gmail.com">vigicar@gmail.com</a><br>العنوان: المحل رقم 1، إقامة كوثر، شارع شفشاون، المدينة الجديدة، مكناس',
+      photo_missing:'الصورة قريباً'
+    }
+  };
+
+  Object.keys(TEXT_FIXES).forEach(lang=>{
+    I18N[lang] = Object.assign(I18N[lang] || {}, TEXT_FIXES[lang]);
+  });
+
+  const CAR_TEXT = {
+    'duster-grey-man-diesel':{
+      fr:'Dacia Duster - Grise - Bo&icirc;te manuelle - Diesel',
+      en:'Dacia Duster - Grey - Manual - Diesel',
+      ar:'داسيا داستر - رمادي - يدوي - ديزل',
+      color:{fr:'Grise', en:'Grey', ar:'رمادي'}
+    },
+    'stepway-silver-auto-essence':{
+      fr:'Dacia Stepway - Argent&eacute;e - Automatique - Essence',
+      en:'Dacia Stepway - Silver - Automatic - Petrol',
+      ar:'داسيا ستيبواي - فضي - أوتوماتيك - بنزين',
+      color:{fr:'Argent&eacute;e', en:'Silver', ar:'فضي'}
+    },
+    'stepway-black-man-diesel':{
+      fr:'Dacia Stepway - Noire - Bo&icirc;te manuelle - Diesel',
+      en:'Dacia Stepway - Black - Manual - Diesel',
+      ar:'داسيا ستيبواي - أسود - يدوي - ديزل',
+      color:{fr:'Noire', en:'Black', ar:'أسود'}
+    },
+    'stepway-bronze-man-diesel':{
+      fr:'Dacia Stepway - Bronze - Bo&icirc;te manuelle - Diesel',
+      en:'Dacia Stepway - Bronze - Manual - Diesel',
+      ar:'داسيا ستيبواي - برونزي - يدوي - ديزل',
+      color:{fr:'Bronze', en:'Bronze', ar:'برونزي'}
+    },
+    'stepway-green-man-diesel':{
+      fr:'Dacia Stepway - Verte - Bo&icirc;te manuelle - Diesel',
+      en:'Dacia Stepway - Green - Manual - Diesel',
+      ar:'داسيا ستيبواي - أخضر - يدوي - ديزل',
+      color:{fr:'Verte', en:'Green', ar:'أخضر'}
+    },
+    'logan-green-auto-essence':{
+      fr:'Dacia Logan - Verte - Automatique - Essence',
+      en:'Dacia Logan - Green - Automatic - Petrol',
+      ar:'داسيا لوغان - أخضر - أوتوماتيك - بنزين',
+      color:{fr:'Verte', en:'Green', ar:'أخضر'}
+    },
+    'logan-grey-man-diesel':{
+      fr:'Dacia Logan - Grise - Bo&icirc;te manuelle - Diesel',
+      en:'Dacia Logan - Grey - Manual - Diesel',
+      ar:'داسيا لوغان - رمادي - يدوي - ديزل',
+      color:{fr:'Grise', en:'Grey', ar:'رمادي'}
+    },
+    'clio5-blue-man-diesel':{
+      fr:'Renault Clio 5 - Bleue - Bo&icirc;te manuelle - Diesel',
+      en:'Renault Clio 5 - Blue - Manual - Diesel',
+      ar:'رينو كليو 5 - أزرق - يدوي - ديزل',
+      color:{fr:'Bleue', en:'Blue', ar:'أزرق'}
+    },
+    'clio5-black-man-diesel':{
+      fr:'Renault Clio 5 - Noire - Bo&icirc;te manuelle - Diesel',
+      en:'Renault Clio 5 - Black - Manual - Diesel',
+      ar:'رينو كليو 5 - أسود - يدوي - ديزل',
+      color:{fr:'Noire', en:'Black', ar:'أسود'}
+    },
+    'c3-darkgrey-auto-essence':{
+      fr:'Citro&euml;n C3 - Gris fonc&eacute; - Automatique - Essence',
+      en:'Citroen C3 - Dark grey - Automatic - Petrol',
+      ar:'سيتروين C3 - رمادي داكن - أوتوماتيك - بنزين',
+      color:{fr:'Gris fonc&eacute;', en:'Dark grey', ar:'رمادي داكن'}
+    },
+    'p208-white-auto-essence':{
+      fr:'Peugeot 208 - Blanche - Bo&icirc;te manuelle - Diesel',
+      en:'Peugeot 208 - White - Manual - Diesel',
+      ar:'بيجو 208 - أبيض - يدوي - ديزل',
+      color:{fr:'Blanche', en:'White', ar:'أبيض'}
+    },
+    'p208-yellow-auto-essence':{
+      fr:'Peugeot 208 - Jaune - Bo&icirc;te manuelle - Diesel',
+      en:'Peugeot 208 - Yellow - Manual - Diesel',
+      ar:'بيجو 208 - أصفر - يدوي - ديزل',
+      color:{fr:'Jaune', en:'Yellow', ar:'أصفر'}
+    },
+    'i10-blue-auto-essence':{
+      fr:'Hyundai i10 - Bleue - Automatique - Essence',
+      en:'Hyundai i10 - Blue - Automatic - Petrol',
+      ar:'هيونداي i10 - أزرق - أوتوماتيك - بنزين',
+      color:{fr:'Bleue', en:'Blue', ar:'أزرق'}
+    },
+    'i20-black-auto-essence':{
+      fr:'Hyundai i20 - Noire - Automatique - Essence',
+      en:'Hyundai i20 - Black - Automatic - Petrol',
+      ar:'هيونداي i20 - أسود - أوتوماتيك - بنزين',
+      color:{fr:'Noire', en:'Black', ar:'أسود'}
     }
   };
 
@@ -689,9 +904,12 @@
     const lang = getLang();
     const cacheKey = `${car.id}-${lang}`;
     if(carNameCache.has(cacheKey)) return carNameCache.get(cacheKey);
-    let name = car.name_fr || '';
+    const fixed = CAR_TEXT[car.id];
+    let name = fixed && fixed[lang] ? fixed[lang] : (car.name_fr || '');
     if(lang === 'en') name = car.name_en || car.name_fr || car.name_ar || '';
     if(lang === 'ar') name = car.name_ar || car.name_fr || car.name_en || '';
+    if(fixed && fixed[lang]) name = fixed[lang];
+    name = decodeHTMLEntities(name);
     carNameCache.set(cacheKey, name);
     return name;
   }
@@ -711,8 +929,17 @@
     return labels.fuel[value] || value;
   }
 
+  function featureLabel(value){
+    const labels = FEATURE_LABELS[getLang()] || FEATURE_LABELS.fr;
+    return labels[value] || value;
+  }
+
   function carColor(car){
     try{
+      const fixed = CAR_TEXT[car.id];
+      if(fixed && fixed.color){
+        return decodeHTMLEntities(fixed.color[getLang()] || fixed.color.fr || '');
+      }
       const name = carName(car) || '';
       const parts = name.split(' - ');
       if(parts.length >= 3){
@@ -733,7 +960,7 @@
     }
     const img = document.createElement('img');
     img.className = 'media';
-    img.loading = 'lazy';
+    img.loading = 'eager';
     img.decoding = 'async';
     img.width = 640;
     img.height = 400;
@@ -748,7 +975,7 @@
         if(cardEl && !cardEl.querySelector('.placeholder-badge')){
           const badge = document.createElement('div');
           badge.className = 'placeholder-badge';
-          badge.textContent = 'Photo a venir';
+          badge.textContent = currentDict().photo_missing || 'Photo coming soon';
           cardEl.appendChild(badge);
         }
       }catch(e){}
@@ -788,7 +1015,7 @@
     featureList.slice(0,3).forEach(feature=>{
       const tag = document.createElement('span');
       tag.className = 'tag';
-      tag.textContent = feature;
+      tag.textContent = featureLabel(feature);
       tags.appendChild(tag);
     });
 
@@ -799,7 +1026,7 @@
 
     const actions = document.createElement('div');
     actions.className = 'card-actions';
-    const bookText = dict.cta_book || 'Reserver';
+    const bookText = dict.cta_book || 'R&eacute;server';
     const waText = dict.cta_whatsapp || 'WhatsApp';
     const book = document.createElement('a');
     book.className = 'btn primary';
@@ -1010,10 +1237,10 @@
     const message = cookieBar.querySelector('[data-role="cookie-message"]');
     const button = cookieBar.querySelector('button');
     if(message){
-      message.textContent = dict.cookie_msg || 'Nous utilisons uniquement des cookies essentiels.';
+      message.textContent = decodeHTMLEntities(dict.cookie_msg || 'Nous utilisons uniquement des cookies essentiels.');
     }
     if(button){
-      button.textContent = dict.cookie_accept || 'J\u2019accepte';
+      button.textContent = decodeHTMLEntities(dict.cookie_accept || 'J\u2019accepte');
     }
   }
 
@@ -1149,6 +1376,9 @@
   function initReveal(){
     const targets = $$('[data-animate]');
     if(!targets.length) return;
+    targets.forEach((target, index)=>{
+      target.style.setProperty('--motion-delay', `${Math.min(index * 55, 440)}ms`);
+    });
     if(!('IntersectionObserver' in window)){
       targets.forEach(target=>target.classList.add('is-visible'));
       return;
@@ -1157,10 +1387,14 @@
       entries.forEach(entry=>{
         if(entry.isIntersecting){
           entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
+          entry.target.classList.remove('is-before');
+        }else if(entry.boundingClientRect.top < 0){
+          entry.target.classList.add('is-before');
+        }else{
+          entry.target.classList.remove('is-visible', 'is-before');
         }
       });
-    }, {threshold:0.15});
+    }, {threshold:[0, 0.15], rootMargin:'0px 0px -8% 0px'});
     targets.forEach(target=>observer.observe(target));
   }
 
@@ -1295,15 +1529,265 @@
     });
   }
 
+  const LUXURY_UI_COPY = {
+    fr:{
+      newsletterTitle:'Offres privées',
+      newsletterText:'Recevez les disponibilités premium, les arrivages et les offres courtes durées.',
+      newsletterPlaceholder:'Votre email',
+      newsletterButton:'S’inscrire',
+      socialTitle:'Accès rapides',
+      dockHome:'Accueil',
+      dockFleet:'Flotte',
+      dockBook:'Réserver',
+      dockWhatsapp:'WhatsApp',
+      backTop:'Retour en haut'
+    },
+    en:{
+      newsletterTitle:'Private offers',
+      newsletterText:'Get premium availability, new arrivals and short-stay offers.',
+      newsletterPlaceholder:'Your email',
+      newsletterButton:'Join',
+      socialTitle:'Quick access',
+      dockHome:'Home',
+      dockFleet:'Fleet',
+      dockBook:'Book',
+      dockWhatsapp:'WhatsApp',
+      backTop:'Back to top'
+    },
+    ar:{
+      newsletterTitle:'\u0639\u0631\u0648\u0636 \u062e\u0627\u0635\u0629',
+      newsletterText:'\u062a\u0648\u0635\u0644 \u0628\u0627\u0644\u062a\u0648\u0641\u0631 \u0648\u0627\u0644\u0633\u064a\u0627\u0631\u0627\u062a \u0627\u0644\u062c\u062f\u064a\u062f\u0629 \u0648\u0639\u0631\u0648\u0636 \u0627\u0644\u0643\u0631\u0627\u0621 \u0627\u0644\u0642\u0635\u064a\u0631.',
+      newsletterPlaceholder:'\u0628\u0631\u064a\u062f\u0643 \u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a',
+      newsletterButton:'\u0627\u0634\u062a\u0631\u0643',
+      socialTitle:'\u0648\u0635\u0648\u0644 \u0633\u0631\u064a\u0639',
+      dockHome:'\u0627\u0644\u0631\u0626\u064a\u0633\u064a\u0629',
+      dockFleet:'\u0627\u0644\u0623\u0633\u0637\u0648\u0644',
+      dockBook:'\u0627\u062d\u062c\u0632',
+      dockWhatsapp:'\u0648\u0627\u062a\u0633\u0627\u0628',
+      backTop:'\u0627\u0644\u0639\u0648\u062f\u0629 \u0644\u0644\u0623\u0639\u0644\u0649'
+    }
+  };
+
+  function luxuryCopy(key){
+    const copy = LUXURY_UI_COPY[getLang()] || LUXURY_UI_COPY.fr;
+    return copy[key] || LUXURY_UI_COPY.fr[key] || '';
+  }
+
+  function updateLuxuryCopy(){
+    $$('[data-lux-copy]').forEach(el=>{
+      const key = el.getAttribute('data-lux-copy');
+      el.textContent = luxuryCopy(key);
+    });
+    $$('[data-lux-placeholder]').forEach(el=>{
+      const key = el.getAttribute('data-lux-placeholder');
+      el.setAttribute('placeholder', luxuryCopy(key));
+    });
+    $$('[data-lux-label]').forEach(el=>{
+      const key = el.getAttribute('data-lux-label');
+      el.setAttribute('aria-label', luxuryCopy(key));
+      if(el.title) el.title = luxuryCopy(key);
+    });
+  }
+
+  function siteRootPrefix(){
+    return location.pathname.includes('/legal/') ? '../' : './';
+  }
+
+  function enhanceLuxuryFooter(){
+    const footer = document.querySelector('.site-footer');
+    if(!footer || footer.dataset.luxEnhanced === 'true') return;
+    footer.dataset.luxEnhanced = 'true';
+
+    const firstCard = footer.querySelector('.footer-card');
+    if(firstCard && !firstCard.querySelector('.footer-social')){
+      const social = document.createElement('div');
+      social.className = 'footer-social';
+      social.innerHTML = `
+        <a href="https://wa.me/212663650333" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+        <a href="tel:+212663650333" aria-label="Phone">☎</a>
+        <a href="mailto:vigicar@gmail.com" aria-label="Email">@</a>
+        <a href="https://maps.google.com/?q=VIGICAR%20Meknes" target="_blank" rel="noopener" aria-label="Map">⌖</a>
+      `;
+      firstCard.appendChild(social);
+    }
+
+    const cards = $$('.footer-card', footer);
+    const lastCard = cards[cards.length - 1];
+    if(lastCard && !lastCard.querySelector('.footer-newsletter')){
+      const newsletter = document.createElement('div');
+      newsletter.className = 'footer-newsletter';
+      newsletter.innerHTML = `
+        <h4 data-lux-copy="newsletterTitle"></h4>
+        <p data-lux-copy="newsletterText"></p>
+        <form class="footer-newsletter-form" novalidate>
+          <input type="email" data-lux-placeholder="newsletterPlaceholder" aria-label="Newsletter email">
+          <button class="btn primary" type="submit" data-lux-copy="newsletterButton"></button>
+        </form>
+      `;
+      lastCard.appendChild(newsletter);
+      const form = newsletter.querySelector('form');
+      form.addEventListener('submit', event=>{
+        event.preventDefault();
+        const input = form.querySelector('input');
+        if(input) input.value = '';
+      });
+    }
+    updateLuxuryCopy();
+  }
+
+  function initBackToTop(){
+    if(document.querySelector('.back-to-top')) return;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'back-to-top';
+    button.setAttribute('data-lux-label', 'backTop');
+    button.title = luxuryCopy('backTop');
+    button.innerHTML = '↑';
+    button.addEventListener('click', ()=>{
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+    document.body.appendChild(button);
+    const sync = ()=>{
+      button.classList.toggle('is-visible', window.scrollY > 560);
+    };
+    window.addEventListener('scroll', sync, {passive:true});
+    sync();
+  }
+
+  function initMobileDock(){
+    if(document.querySelector('.mobile-dock')) return;
+    const root = siteRootPrefix();
+    const dock = document.createElement('nav');
+    dock.className = 'mobile-dock';
+    dock.setAttribute('aria-label', 'Mobile navigation');
+    dock.innerHTML = `
+      <a href="${root}index.html" data-dock-page="index.html"><span aria-hidden="true">⌂</span><small data-lux-copy="dockHome"></small></a>
+      <a href="${root}fleet.html" data-dock-page="fleet.html"><span aria-hidden="true">◇</span><small data-lux-copy="dockFleet"></small></a>
+      <a href="${root}booking.html" data-dock-page="booking.html"><span aria-hidden="true">＋</span><small data-lux-copy="dockBook"></small></a>
+      <a href="https://wa.me/212663650333" target="_blank" rel="noopener"><span aria-hidden="true">✆</span><small data-lux-copy="dockWhatsapp"></small></a>
+    `;
+    const current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    $$('[data-dock-page]', dock).forEach(link=>{
+      if((link.getAttribute('data-dock-page') || '').toLowerCase() === current){
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+    document.body.appendChild(dock);
+    updateLuxuryCopy();
+  }
+
+  function initNavGlass(){
+    const nav = document.querySelector('.navbar');
+    if(!nav) return;
+    const hasHero = Boolean(document.querySelector('.hero'));
+    const sync = ()=>{
+      nav.classList.toggle('is-scrolled', window.scrollY > 24 || !hasHero);
+    };
+    window.addEventListener('scroll', sync, {passive:true});
+    sync();
+  }
+
+  function initLuxuryCursor(){
+    if(window.matchMedia('(pointer: coarse), (prefers-reduced-motion: reduce)').matches) return;
+    if(document.querySelector('.lux-cursor')) return;
+
+    const cursor = document.createElement('div');
+    const dot = document.createElement('div');
+    cursor.className = 'lux-cursor';
+    dot.className = 'lux-cursor-dot';
+    document.body.append(cursor, dot);
+
+    let targetX = window.innerWidth / 2;
+    let targetY = window.innerHeight / 2;
+    let cursorX = targetX;
+    let cursorY = targetY;
+
+    const interactiveSelector = 'a, button, input, select, textarea, .card, .chip, [role="button"]';
+    const render = ()=>{
+      cursorX += (targetX - cursorX) * 0.18;
+      cursorY += (targetY - cursorY) * 0.18;
+      cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+      dot.style.transform = `translate3d(${targetX}px, ${targetY}px, 0) translate(-50%, -50%)`;
+      requestAnimationFrame(render);
+    };
+
+    window.addEventListener('pointermove', event=>{
+      targetX = event.clientX;
+      targetY = event.clientY;
+      document.body.classList.add('cursor-ready');
+      document.body.classList.toggle('cursor-hover', Boolean(event.target.closest(interactiveSelector)));
+    }, {passive:true});
+
+    document.addEventListener('pointerleave', ()=>{
+      document.body.classList.remove('cursor-ready', 'cursor-hover');
+    });
+
+    render();
+  }
+
+  function initMagneticButtons(){
+    if(window.matchMedia('(pointer: coarse), (prefers-reduced-motion: reduce)').matches) return;
+    const selector = '.btn, .cta, .lang-toggle, .contact-pill, .footer-social a, .mobile-dock a, .back-to-top';
+    document.addEventListener('pointermove', event=>{
+      const target = event.target.closest(selector);
+      if(!target) return;
+      const rect = target.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width - 0.5) * 12;
+      const y = ((event.clientY - rect.top) / rect.height - 0.5) * 10;
+      target.style.setProperty('--mag-x', `${x.toFixed(2)}px`);
+      target.style.setProperty('--mag-y', `${y.toFixed(2)}px`);
+    }, {passive:true});
+
+    document.addEventListener('pointerout', event=>{
+      const target = event.target.closest(selector);
+      if(!target) return;
+      target.style.removeProperty('--mag-x');
+      target.style.removeProperty('--mag-y');
+    });
+  }
+
+  function initCardTilt(){
+    if(window.matchMedia('(pointer: coarse), (prefers-reduced-motion: reduce)').matches) return;
+    document.addEventListener('pointermove', event=>{
+      const card = event.target.closest('.card');
+      if(!card) return;
+      const rect = card.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - 0.5;
+      const y = (event.clientY - rect.top) / rect.height - 0.5;
+      card.style.setProperty('--tilt-y', `${(x * 8).toFixed(2)}deg`);
+      card.style.setProperty('--tilt-x', `${(-y * 7).toFixed(2)}deg`);
+    }, {passive:true});
+
+    document.addEventListener('pointerout', event=>{
+      const card = event.target.closest('.card');
+      if(!card || card.contains(event.relatedTarget)) return;
+      card.style.removeProperty('--tilt-x');
+      card.style.removeProperty('--tilt-y');
+    });
+  }
+
+  function initLuxuryExperience(){
+    enhanceLuxuryFooter();
+    initBackToTop();
+    initMobileDock();
+    initNavGlass();
+    initLuxuryCursor();
+    initMagneticButtons();
+    initCardTilt();
+  }
+
   document.addEventListener('vigicar:langchange', ()=>{
     renderFeatured();
     renderFleet();
     ensureCardMediaLoaded();
     updateCookieBannerLang();
     normalizeCardText();
+    updateLuxuryCopy();
   });
 
   document.addEventListener('DOMContentLoaded', async ()=>{
+    translateElements();
+    enhanceLuxuryFooter();
     translateElements();
     initLangUI();
     initResponsiveNav();
@@ -1318,6 +1802,7 @@
     setTodayDefaults();
     setFooterYear();
     initQuickWhatsApp();
+    initLuxuryExperience();
     ensureCardMediaLoaded();
     document.body.classList.add('js-ready');
     initReveal();
